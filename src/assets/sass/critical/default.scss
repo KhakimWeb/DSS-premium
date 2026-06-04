@@ -13,7 +13,8 @@
 // Default
 body {
     font-family:  "Arial", sans-serif;
-    line-height: 1.4;
+    font-size: 18px;
+    line-height: 1.2;
     font-weight: 400;
     color: $white;
     background-color: $black_light;
@@ -27,16 +28,20 @@ body {
     padding: 0;
 }
 
-
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1220px;
     margin: 0 auto;
     padding: 0 20px;
 
-    @media (max-width: 767px) {
-        padding: 0 16px;
+    @include media(767px) {
+        padding: 0 10px;
     }
+}
+
+.h1 {
+    font-weight: 400;
+    font-size: clamp(20px, 4.7vw, 36px);
 }
 
 .animated {
@@ -48,4 +53,50 @@ body {
 .showed {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+/* Buttons */
+.button {
+    @include inline-flex(14px);
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+
+    color: $white;
+    font-size: 16px;
+    
+
+    @include hover {
+        .button__icon {
+            background-color: $red;
+
+            path {
+                stroke: $white;
+            }
+        }
+    }
+}
+
+.button__icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-color: $white;
+    @include trs;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        transform: translateX(1px);
+    }
+
+    path {
+        stroke: $black_light;
+        @include trs;
+    }
 }

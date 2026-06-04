@@ -1,1 +1,25 @@
 @use '../vars' as *;
+
+.hero {
+    @include background;
+    background-image: url('../../img/home/hero.webp');
+}
+
+.hero__inner {
+    padding: 410px 0 40px;
+}
+
+.hero__text {
+    display: grid;
+    grid-template-columns: 650fr 460fr;
+    gap: 60px;
+    align-items: flex-start;
+
+    margin-top: 35px;
+}
+
+.hero__subtitle {
+    text-align: right;
+    color: $gray_light;
+    font-size: clamp(14px, 2.6vw, 20px);
+}
