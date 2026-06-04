@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+<title>{{meta-title}}</title>
+
+<!-- fancybox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"/>
+
+<!-- fancycarousel -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.arrows.css"/> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.dots.css"/> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.autoplay.css"/> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.autoscroll.css"/> 
+
+<!-- Critical css -->
+<link rel="stylesheet" href="{{root}}assets/css/critical/default.min.css">
+
+{{#ifpage 'index'}}
+  <link rel="stylesheet" href="{{root}}assets/css/critical/home.min.css">
+{{/ifpage}}
+
+<!-- Useful meta tags -->
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noodp">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="google" content="notranslate">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="{{ meta-description }}">
+
+<!--favicon-->
+
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="example.com" />
+<meta property="og:title" content="Title" />
+<meta property="og:description" content="Description" />
+<meta property="og:image" content="{{root}}assets/img/og.webp" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="example.com" />
+<meta property="twitter:title" content="Title" />
+<meta property="twitter:description" content="Description" />
+<meta property="twitter:image" content="{{root}}assets/img/og.webp" />
+
+
+<!--Yandex Metrika-->
+{{> metrika}}

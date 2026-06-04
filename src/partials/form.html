@@ -1,0 +1,14 @@
+<form>
+    <input type="text" name="name" class="form__input" placeholder="Ваше имя">
+    <input type="text" name="phone" class="form__input" placeholder="+7 (999) 999-99-99">
+    <input type="text" name="site" style="display:none">
+    <input type="text" name="url" style="display:none">
+    <button class="form__button" type="submit">
+        <img style="display:none" src="{{> loader}}" data-lazy="{{> loader}}" alt="loader">
+        <span>Получить бесплатную консультацию</span>
+    </button>
+    <div class="form__notice">
+        <input class="form__checkbox" type="checkbox">
+        <span>Отправляя форму, вы даете согласие на обработку персональных данных в соответствии с <a href="/policy/">политикой персональных данных</a></span>
+    </div>
+</form>

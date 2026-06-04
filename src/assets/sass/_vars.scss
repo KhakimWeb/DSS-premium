@@ -1,0 +1,54 @@
+$black_light: #131313;
+$black_dark: #0E0E0E;
+$white: #fff;
+$gray_light: rgba($white, .6);
+$gray_dark: #616161;
+$red: #DF0404;
+$margin: clamp(30px, 7.8vw, 60px);
+
+
+@mixin trs {
+    transition: .3s ease all;
+}
+
+@mixin radius {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+@mixin background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin absolute-image {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@mixin inline-flex($gap, $align:center) {
+    display: inline-flex;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin media($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    }
+}

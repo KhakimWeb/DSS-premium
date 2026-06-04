@@ -1,0 +1,14 @@
+@use '../../vars' as *;
+
+
+.fz-20 {
+    font-size: clamp(16px, 2.6vw, 20px);
+}
+
+.fz-16{
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.center {
+    text-align: center;
+}
