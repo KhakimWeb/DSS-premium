@@ -7,6 +7,14 @@
 
 .hero__inner {
     padding: 410px 0 40px;
+
+    @include media(1000px) {
+        padding: 440px 0 60px;
+    }
+
+    @include media(600px) {
+        padding: 410px 0 40px;
+    }
 }
 
 .hero__text {
@@ -16,10 +24,20 @@
     align-items: flex-start;
 
     margin-top: 35px;
+
+    @include media(1000px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 25px;
+    }
 }
 
 .hero__subtitle {
     text-align: right;
     color: $gray_light;
     font-size: clamp(14px, 2.6vw, 20px);
+
+    @include media(1000px) {
+        text-align: left;
+    }
 }
