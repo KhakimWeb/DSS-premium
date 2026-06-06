@@ -3,7 +3,7 @@
 ========================================== */
 
 function show(element, display) {
-    element.style.transition = '0.5s ease all';
+    element.style.transition = '0.3s ease all';
     element.style.display = 'none';
     element.style.opacity = '0';
     element.style.display = display || 'block';
@@ -13,10 +13,10 @@ function show(element, display) {
 };
 
 function hide(element) {
-    element.style.transition = '0.5s ease all';
+    element.style.transition = '0.3s ease all';
     element.style.opacity = '0';
 
     setTimeout(() => {
         element.style.display = 'none';
-    }, 510);
+    }, 310);
 }

@@ -9,4 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //= components/form
     //= components/faq
     //= components/scroll
+
+    //= components/header
 })
