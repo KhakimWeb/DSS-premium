@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="consultation">
+
+        <div class="consultation__form">
+            <div class="consultation__title">Получите персональную консультацию</div>
+
+            <form action="" class="form">
+                <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+                <input type="text" class="form__input" name="phone" placeholder="Телефон">
+
+                <label class="form__checkbox">
+                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                    <span>Я ознакомлен и выражаю согласие с положениями <a href="#">Политики обработки  Персональных данных</a></span>
+                </label>
+
+                <label class="form__checkbox">
+                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                    <span>Я ознакомлен и выражаю <a href="#">согласие на обработку персональных данных</a></span>
+                </label>
+                
+                <button class="button" type="submit">
+                    <div class="button__icon">
+                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.96875 9.36572L6.79018 4.86572L1.96875 0.365723"/>
+                        </svg>
+                    </div>
+                    <div class="button__text">Получить консультацию</div>
+                </button>
+            </form>
+        </div>
+
+        <div class="consultation__info">
+            <img class="consultation__image" src="{{> loader}}" data-lazy="{{root}}assets/img/general/form-consultation.webp" alt="consultation">
+            <div class="consultation__notice">Мы не передаём ваши данные третьим лицам. Свяжется персональный менеджер — без спама и навязчивых звонков.</div>
+        </div>
+
+    </div>
+</div>

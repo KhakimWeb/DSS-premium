@@ -1,0 +1,58 @@
+@use '../vars' as *;
+
+/* Buttons */
+.button {
+    @include inline-flex(14px);
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+
+    color: $white;
+    font-size: 16px;
+
+    &--header {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+        font-size: clamp(14px, 2vw,  16px);
+        @include trs;
+
+        @include hover {
+            color: $gray_light;
+        }
+    }
+    
+
+    @include hover {
+        .button__icon {
+            background-color: $red;
+
+            path {
+                stroke: $white;
+            }
+        }
+    }
+}
+
+.button__icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-color: $white;
+    @include trs;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        transform: translateX(1px);
+    }
+
+    path {
+        stroke: $black_light;
+        @include trs;
+    }
+}

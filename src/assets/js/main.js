@@ -11,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
     //= components/scroll
 
     //= components/header
+    //= components/modals
 })

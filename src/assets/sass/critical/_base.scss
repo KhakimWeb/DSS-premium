@@ -1,0 +1,63 @@
+@use '../vars' as *;
+
+// Fonts
+@font-face {
+    font-family: "Arial";
+    src: url("../../fonts/arial.woff2") format("woff2"), url("../../fonts/arial.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// Default
+body {
+    font-family:  "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $white;
+    background-color: $black_dark;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include media(767px) {
+        padding: 0 10px;
+    }
+}
+
+.h1 {
+    font-weight: 400;
+    font-size: clamp(20px, 4.7vw, 36px);
+}
+
+.animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .3s  ease !important;
+}
+
+.showed {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,43 @@
+@use '../../vars' as *;
+
+.modal-wrapper {
+    position: fixed;
+    z-index: 3;
+    inset: 0;
+    background-color: rgba(#000000, 0.4);
+    backdrop-filter: blur(20px);
+    padding: 100px 0;
+}
+
+.modal-wrapper__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow-y: auto;
+    max-height: 100%;
+
+    padding: 40px;
+}
+
+
+.modal__close {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    opacity: .6;
+    @include trs;
+
+    @include hover {
+        opacity: 1;
+    }
+}
