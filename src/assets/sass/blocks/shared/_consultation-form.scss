@@ -8,10 +8,21 @@
     display: grid;
     grid-template-columns: 430fr 580fr;
     gap: 40px;
-}
 
+    @include media(1000px) {
+        padding: 20px;
+        gap: 20px;
+    }
 
-.consultation__form {
+    @include media(767px) {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+
+    &--modal {
+        padding: 0;
+        background-color: inherit;
+    }
 }
 
 .consultation__title {
@@ -31,13 +42,15 @@
     display: inline-flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 
     .button {
-        margin-top: 20px;
+        margin-top: clamp(10px, 2.6vw, 20px);
     }
 }
 
 .form__input {
+
     padding: 14px 20px;
     border: 1px solid rgba($white, .2);
     font-size: clamp(12px, 2vw, 16px);
@@ -48,30 +61,65 @@
 }
 
 .form__checkbox {
-    @include inline-flex(14px, 'flex-start');
-    font-size: 12px;
-    color: $gray_light;
+    appearance: none;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: .6;
+    @include trs;
+
+    &::after {
+        content: url('../../../img/icons/checkbox.svg');
+        display: block;
+        width: 26px;
+        height: 26px;
+    }
+
+    @include hover {
+        opacity: 1;
+    }
 }
 
+.form__checkbox:checked {
+    &::after {
+        content: url('../../../img/icons/checkbox-active.svg');
+        display: block;
+        width: 26px;
+        height: 26px;
+    }    
+}
 
+.form__label {
+    @include inline-flex(14px);
+    font-size: 12px;
+    color: $gray_light;
 
-
-
-
-
-
-
+    a {
+        text-decoration: underline;
+        text-decoration-thickness: .5px;
+        text-underline-offset: 3px;
+    }
+}
 
 .consultation__info {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
     flex-direction: column;
 }
 
 .consultation__image {
-    display: block;
-    width: 100%;
+    flex-grow: 1;
+    position: relative;
+
+    @include media(767px) {
+        aspect-ratio: 330/190;
+    }
+
+    img {
+        @include absolute-image;
+    }
 }
 
 .consultation__notice {

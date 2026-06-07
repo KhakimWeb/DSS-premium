@@ -1,14 +1,26 @@
-<form>
-    <input type="text" name="name" class="form__input" placeholder="Ваше имя">
-    <input type="text" name="phone" class="form__input" placeholder="+7 (999) 999-99-99">
+<form class="form" data-form="consultation">
+    <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+    <input type="text" class="form__input" name="phone" placeholder="Телефон">
+    
     <input type="text" name="site" style="display:none">
     <input type="text" name="url" style="display:none">
-    <button class="form__button" type="submit">
-        <img style="display:none" src="{{> loader}}" data-lazy="{{> loader}}" alt="loader">
-        <span>Получить бесплатную консультацию</span>
+
+    <label class="form__label">
+        <input class="form__checkbox" type="checkbox" name="checkbox-privacy">
+        <span>Я ознакомлен и выражаю согласие с положениями <a href="#">Политики обработки  Персональных данных</a></span>
+    </label>
+
+    <label class="form__label">
+        <input class="form__checkbox"  type="checkbox" name="checkbox-agreement">
+        <span>Я ознакомлен и выражаю <a href="#">согласие на обработку персональных данных</a></span>
+    </label>
+
+    <button class="button" type="submit">
+        <div class="button__icon">
+            <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96875 9.36572L6.79018 4.86572L1.96875 0.365723"/>
+            </svg>
+        </div>
+        <div class="button__text">Получить консультацию</div>
     </button>
-    <div class="form__notice">
-        <input class="form__checkbox" type="checkbox">
-        <span>Отправляя форму, вы даете согласие на обработку персональных данных в соответствии с <a href="/policy/">политикой персональных данных</a></span>
-    </div>
 </form>

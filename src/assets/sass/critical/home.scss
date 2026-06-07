@@ -1,5 +1,6 @@
 @use '../vars' as *;
 
+// HERO
 .hero {
     @include background;
     background-image: url('../../img/home/hero.webp');
@@ -41,3 +42,6 @@
         text-align: left;
     }
 }
+
+
+// ADVANTAGES

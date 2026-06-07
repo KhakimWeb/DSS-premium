@@ -8,13 +8,13 @@ meta-description: Главная
     <div class="container">
         <div class="hero__inner">
 
-            <button class="button">
+            <button class="button" data-modal="#consultation">
                 <div class="button__icon">
                     <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.96875 9.36572L6.79018 4.86572L1.96875 0.365723"/>
                     </svg>
                 </div>
-                <div class="button__text" data-modal="#consultation">Консультация</div>
+                <div class="button__text">Консультация</div>
             </button>
 
             <div class="hero__text">
@@ -27,6 +27,22 @@ meta-description: Главная
     </div>
 </div>
 
-{{> consultation}}
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="benefits">
+    <div class="container">
+        <div class="benefits__inner">
+
+            <div class="benefits__item">
+                <div class="benefits__icon">
+                    <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/benefit-icon-1.svg" alt="">
+                </div>
+                <div class="benefits__title">Персональный менеджер 24/7</div>
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/benefit-1.webp" alt="" class="benefits__image">
+            
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- {{> consultation}} -->

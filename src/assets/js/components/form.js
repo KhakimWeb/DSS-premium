@@ -2,8 +2,8 @@
    Формы
 ========================================== */
 
-const consultationForms = document.querySelectorAll('[data-element="consultation-form"]'),
-      maskedInputs = document.querySelectorAll('input[name="phone"]');
+const consultationForms = document.querySelectorAll('[data-form="consultation"]'),
+      phoneInputs = document.querySelectorAll('input[name="phone"]');
 
 if (consultationForms.length) {
     consultationForms.forEach(form => {
@@ -14,15 +14,12 @@ if (consultationForms.length) {
     })
 }
 
-if (maskedInputs.length) {
-    maskedInputs.forEach(maskedInput => {
-        maskedInput.addEventListener('focus', (event) => {
-            maskInput(event)
-        });
-
-        maskedInput.addEventListener('input', (event) => {
-            maskInput(event)
-        });
+if (phoneInputs.length) {
+    phoneInputs.forEach(phoneInput => {
+        const maskOptions = {
+            mask: '+{7} (000) 000-00-00'
+        };
+        IMask(phoneInput, maskOptions);
     })
 }
 
@@ -30,66 +27,48 @@ function submitForm(form) {
     const phoneInput = form.querySelector('input[name="phone"]'),
         fakeInput = form.querySelector('input[name="site"]'),
         urlInput = form.querySelector('input[name="url"]'),
-        formCheckbox = form.querySelector('.form__checkbox'),
+        formCheckboxes = form.querySelectorAll('.form__checkbox'),
         formSubmitButton = form.querySelector('button'),
-        buttonTextDiv = formSubmitButton.querySelector('div'),
-        buttonSpinner = formSubmitButton.querySelector('img');
+        formSubmitButtonText = formSubmitButton.querySelector('.button__text'),
+        url = `${window.location.origin}/assets/php/telegram.php`;
 
-    if (phoneInput.value.trim().length == 18 && fakeInput.value.trim() === '' && formCheckbox.checked ) {
-
-        const url = `${window.location.origin}/wp-content/themes/theme-name/assets/php/telegram.php`;
-        const buttonText = buttonTextDiv.textContent;
-
-        buttonTextDiv.textContent = 'Отправка данных...';
-        show(buttonSpinner);
+    if (phoneInput.value.trim().length == 18 && fakeInput.value.trim() === '' && [...formCheckboxes].every(checkbox => checkbox.checked) ) {
 
         urlInput.value = window.location.href;
         formSubmitButton.disabled = true;
-        formSubmitButton.style.backgroundColor = '#4a4a4a';
+        const buttonDefText = formSubmitButtonText.textContent;
 
+        let dots = 1;
+        const loadingAnimation = setInterval(() => {
+            formSubmitButtonText.textContent = 'Отправка данных' + '.'.repeat(dots);
+
+            dots++;
+
+            if (dots > 5) {
+                dots = 1;
+            }
+        }, 300);
+
+        // new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve();
+        //     }, 5000);
+        // })
         fetch(url, {
             method: 'POST',
             body: new FormData(form)
         })
         .then(() => {
             formSubmitButton.disabled = false;
-            formSubmitButton.style.backgroundColor = '';
-            buttonTextDiv.textContent = buttonText;
-            hide(buttonSpinner);
-
-            window.location.href = `${window.location.origin}/success/`;
+            clearInterval(loadingAnimation);
+            formSubmitButtonText.textContent = buttonDefText;
+            window.location.href = `${window.location.origin}/success.html`;
         })
-
         .catch(() => {
             alert('Ошибка сервера. Повторите позже');
-                formSubmitButton.disabled = false;
-                formSubmitButton.style.backgroundColor = '';
-                formSubmitButton.value = formSubmitButton.value ? buttonText : '';
-                formSubmitButton.textContent = formSubmitButton.textContent ? buttonText : '';
+            formSubmitButton.disabled = false;
         })
     } else {
-        alert('Укажите номер телефона и согласитесь с политикой обработки данных')
+        alert('Укажите номер телефона и отметьте галочки на обработку данных')
     }
-}
-
-function maskInput(event) {
-    let input = event.target.value.replace(/\D/g, ''); // Удаление всех нецифровых символов
-
-    // Обрабатываем форматирование
-    let formattedNumber = '+7';
-    
-    if (input.length > 1) {
-      formattedNumber += ' (' + input.slice(1, 4); // Код города
-    }
-    if (input.length >= 4) {
-      formattedNumber += ') ' + input.slice(4, 7); // Первая часть номера
-    }
-    if (input.length >= 7) {
-      formattedNumber += '-' + input.slice(7, 9); // Вторая часть номера
-    }
-    if (input.length >= 9) {
-      formattedNumber += '-' + input.slice(9, 11); // Третья часть номера
-    }
-  
-    event.target.value = formattedNumber;
 }
