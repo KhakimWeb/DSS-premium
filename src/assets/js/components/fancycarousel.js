@@ -3,7 +3,8 @@
 ========================================== */
 
 const container = document.getElementById("myCarousel");
-const options = {
+
+const defOptions = {
   infinite: true,
   transition: "slide",
   center: false,
@@ -25,4 +26,12 @@ const options = {
   }
 };
 
-container ? Carousel(container, options, {Arrows, Dots, Autoplay, Autoscroll, Lazyload }).init() : '';
+const marksOptions = {
+  infinite: true,
+  transition: "slide",
+  center: false
+};
+
+
+
+container ? Carousel(container, defOptions, {Arrows, Dots, Autoplay, Autoscroll, Lazyload }).init() : '';

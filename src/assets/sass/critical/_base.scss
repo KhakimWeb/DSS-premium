@@ -18,6 +18,9 @@ body {
     font-weight: 400;
     color: $white;
     background-color: $black_dark;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 *,

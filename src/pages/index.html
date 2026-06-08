@@ -28,21 +28,136 @@ meta-description: Главная
 </div>
 
 
+
 <div class="benefits">
     <div class="container">
         <div class="benefits__inner">
 
-            <div class="benefits__item">
+            <!-- 1 -->
+            <div class="benefits__item  animated">
                 <div class="benefits__icon">
-                    <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/benefit-icon-1.svg" alt="">
+                    <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/benefit-icon-1.svg" alt="Персональный менеджер 24/7">
                 </div>
-                <div class="benefits__title">Персональный менеджер 24/7</div>
-                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/benefit-1.webp" alt="" class="benefits__image">
-            
+                <div class="benefits__title">Персональный<br>менеджер 24/7</div>
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/benefit-1.webp" alt="Персональный менеджер 24/7" class="benefits__image">
+            </div>
+
+            <!-- 2 -->
+            <div class="benefits__item  animated" data-delay="100"> 
+                <div class="benefits__icon">
+                    <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/benefit-icon-2.svg" alt="Полная страховка на каждом этапе">
+                </div>
+                <div class="benefits__title">Полная страховка<br>на каждом этапе</div>
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/benefit-2.webp" alt="Полная страховка на каждом этапе" class="benefits__image">
+            </div>
+
+            <!-- 3 -->
+            <div class="benefits__item  animated" data-delay="200">
+                <div class="benefits__icon">
+                    <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/benefit-icon-3.svg" alt="Фиксированной цена по договору">
+                </div>
+                <div class="benefits__title">Фиксированной<br>цена по договору</div>
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/benefit-3.webp" alt="Фиксированной цена по договору" class="benefits__image">
+            </div>
+
+            <!-- 4 -->
+            <div class="benefits__item  animated" data-delay="300">
+                <div class="benefits__icon">
+                    <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/benefit-icon-4.svg" alt="Пожизненная гарантия юридической чистоты авто">
+                </div>
+                <div class="benefits__title  benefits__title--last">Пожизненная гарантия<br>юридической чистоты авто</div>
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/benefit-4.webp" alt="Пожизненная гарантия юридической чистоты авто" class="benefits__image  benefits__image--last">
             </div>
 
         </div>
     </div>
+
+    <div class="marks  active">
+        <div class="marks__track">
+            <img src="{{root}}assets/img/home/marks/marks.webp" alt="" class="marks__img">
+            <img src="{{root}}assets/img/home/marks/marks.webp" alt="" class="marks__img">
+        </div>
+    </div>
 </div>
+
+
+
+<div class="catalog" data-css="/blocks/shared/catalog.min.css">
+    <div class="container">
+            
+        <div class="catalog__header">
+            <h2 class="h2">Популярные автомобили премиум-класса, которые мы поставляем:</h2>
+            <a href="/catalog.html" class="catalog__link">каталог</a>
+            <div class="catalog__subtitle">Все автомобили проходят профессиональную проверку и поставляются с полной страховкой.</div>
+        </div>
+
+        <div class="catalog__tabs">
+            <div class="catalog__tab">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/ferrari.svg" alt="Lamborghini">
+                <div>Lamborghini</div>
+            </div>
+            <div class="catalog__tab">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/mercedes.svg" alt="Lamborghini">
+                <div>Mercedes</div>
+            </div>
+            <div class="catalog__tab">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/bentley.svg" alt="Lamborghini">
+                <div>Bentley</div>
+            </div>
+            <div class="catalog__tab">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/bmw.svg" alt="Lamborghini">
+                <div>BMW</div>
+            </div>
+        </div>
+
+        <div class="catalog__cards-wrapper">
+
+            <div class="catalog__grid">
+                <a href="#" class="car">
+                    <img src="{{> loader}}" data-lazy="{{> image}}" alt="" class="car__img">
+                    <div class="car__mark">Ferrari</div>
+                    <div class="car__model">599 GTB Fiorano</div>
+                    <div class="car__info">
+                        <div>
+                            <div class="car__label">Год выпуска</div>
+                            <div class="car__value">2012</div>
+                        </div>
+                        <div>
+                            <div class="car__label">Цена</div>
+                            <div class="car__value">18 600 000 ₽ </div>
+                        </div>
+                        <img src="{{root}}assets/img/icons/card-arrow.svg" alt="">
+                    </div>
+                    
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- {{> consultation}} -->
