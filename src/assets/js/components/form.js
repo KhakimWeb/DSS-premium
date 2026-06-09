@@ -29,18 +29,17 @@ function submitForm(form) {
         urlInput = form.querySelector('input[name="url"]'),
         formCheckboxes = form.querySelectorAll('.form__checkbox'),
         formSubmitButton = form.querySelector('button'),
-        formSubmitButtonText = formSubmitButton.querySelector('.button__text'),
         url = `${window.location.origin}/assets/php/telegram.php`;
 
     if (phoneInput.value.trim().length == 18 && fakeInput.value.trim() === '' && [...formCheckboxes].every(checkbox => checkbox.checked) ) {
 
         urlInput.value = window.location.href;
         formSubmitButton.disabled = true;
-        const buttonDefText = formSubmitButtonText.textContent;
+        const buttonDefText = formSubmitButton.textContent;
 
         let dots = 1;
         const loadingAnimation = setInterval(() => {
-            formSubmitButtonText.textContent = 'Отправка данных' + '.'.repeat(dots);
+            formSubmitButton.textContent = 'Отправка данных' + '.'.repeat(dots);
 
             dots++;
 
@@ -61,7 +60,7 @@ function submitForm(form) {
         .then(() => {
             formSubmitButton.disabled = false;
             clearInterval(loadingAnimation);
-            formSubmitButtonText.textContent = buttonDefText;
+            formSubmitButton.textContent = buttonDefText;
             window.location.href = `${window.location.origin}/success.html`;
         })
         .catch(() => {

@@ -8,6 +8,13 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: "Arial";
+    src: url("../../fonts/arial-bold.woff2") format("woff2"), url("../../fonts/arial-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 // Default
@@ -36,6 +43,7 @@ body {
     color: inherit;
     font-family: inherit;
     font-size: inherit;
+    font-weight: 400;
 }
 
 .container {
@@ -52,6 +60,10 @@ body {
 .h1 {
     font-weight: 400;
     font-size: clamp(20px, 4.7vw, 36px);
+}
+
+.h2 {
+    font-size: clamp(20px, 4.4vw, 34px);
 }
 
 .animated {

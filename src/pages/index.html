@@ -7,15 +7,7 @@ meta-description: Главная
 <div class="hero">
     <div class="container">
         <div class="hero__inner">
-
-            <button class="button" data-modal="#consultation">
-                <div class="button__icon">
-                    <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.96875 9.36572L6.79018 4.86572L1.96875 0.365723"/>
-                    </svg>
-                </div>
-                <div class="button__text">Консультация</div>
-            </button>
+            <button class="button" data-modal="#consultation">Консультация</button>
 
             <div class="hero__text">
                 <h1 class="h1  animated">Эксклюзивные авто премиум-класса из Кореи, Китая, Европы, Японии, Америки и&nbsp;ОАЭ</h1>
@@ -82,57 +74,79 @@ meta-description: Главная
 
 
 
-<div class="catalog" data-css="/blocks/shared/catalog.min.css">
+<div id="home-catalog" class="catalog" data-css="/blocks/shared/catalog.min.css">
     <div class="container">
             
         <div class="catalog__header">
             <h2 class="h2">Популярные автомобили премиум-класса, которые мы поставляем:</h2>
-            <a href="/catalog.html" class="catalog__link">каталог</a>
-            <div class="catalog__subtitle">Все автомобили проходят профессиональную проверку и поставляются с полной страховкой.</div>
+            <a href="/catalog.html" class="catalog__link  fz-16-12 ">каталог</a>
+            <div class="catalog__subtitle  fz-20-14  gray-text">Все автомобили проходят профессиональную проверку и поставляются с полной страховкой.</div>
         </div>
 
         <div class="catalog__tabs">
-            <div class="catalog__tab">
-                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/ferrari.svg" alt="Lamborghini">
-                <div>Lamborghini</div>
+            {{#repeat 5}}
+            <div class="catalog__tab  fz-16-12">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/ferrari.svg" alt="Ferrari">
+                <div>Ferrari</div>
             </div>
-            <div class="catalog__tab">
-                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/mercedes.svg" alt="Lamborghini">
+            <div class="catalog__tab  fz-16-12">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/mercedes.svg" alt="Mercedes">
                 <div>Mercedes</div>
             </div>
-            <div class="catalog__tab">
-                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/bentley.svg" alt="Lamborghini">
+            <div class="catalog__tab  fz-16-12">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/bentley.svg" alt="Bentley">
                 <div>Bentley</div>
             </div>
-            <div class="catalog__tab">
-                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/bmw.svg" alt="Lamborghini">
+            <div class="catalog__tab  fz-16-12">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/marks/bmw.svg" alt="BMW">
                 <div>BMW</div>
             </div>
+            {{/repeat}}
         </div>
 
-        <div class="catalog__cards-wrapper">
+        <div style="display: none;" class="catalog__open">
+            <div>Показать все марки</div>
+            <svg viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4561_77787)">
+                <path d="M23 10L12 21L1 10" stroke="#575757" stroke-width="2"/>
+                <rect x="11" width="2" height="20" fill="#575757"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_4561_77787">
+                <rect width="24" height="23" fill="#575757"/>
+                </clipPath>
+                </defs>
+            </svg>
 
-            <div class="catalog__grid">
-                <a href="#" class="car">
-                    <img src="{{> loader}}" data-lazy="{{> image}}" alt="" class="car__img">
-                    <div class="car__mark">Ferrari</div>
-                    <div class="car__model">599 GTB Fiorano</div>
-                    <div class="car__info">
-                        <div>
-                            <div class="car__label">Год выпуска</div>
-                            <div class="car__value">2012</div>
-                        </div>
-                        <div>
-                            <div class="car__label">Цена</div>
-                            <div class="car__value">18 600 000 ₽ </div>
-                        </div>
-                        <img src="{{root}}assets/img/icons/card-arrow.svg" alt="">
+        </div>
+
+        <div class="catalog__grid">
+            {{#repeat 7}}
+            <a href="#" class="car">
+                <div class="car__img">
+                    <img src="{{> loader}}" data-lazy="{{> image}}" alt="">
+                </div>
+                <div class="car__mark">Ferrari</div>
+                <div class="car__model">599 GTB Fiorano</div>
+                <div class="car__info">
+                    <div>
+                        <div class="car__label">Год выпуска</div>
+                        <div class="car__value">2012</div>
                     </div>
-                    
-                </a>
-            </div>
+                    <div>
+                        <div class="car__label">Цена</div>
+                        <div class="car__value">18 600 000 ₽ </div>
+                    </div>
+                    <img src="{{root}}assets/img/icons/card-arrow.svg" alt="">
+                </div>
+                
+            </a>
+            {{/repeat}}
         </div>
 
+        <div class="catalog__btn">
+            <a href="/catalog.html" class="button">Смотреть весь каталог</a>
+        </div>
 
     </div>
 </div>

@@ -1,3 +1,4 @@
+@use '../../vars' as *;
 @use 'modals';
 @use 'consultation-form';
 
@@ -11,8 +12,12 @@
     font-size: clamp(14px, 2.6vw, 20px);
 }
 
-.fz-16-14{
-    font-size: clamp(14px, 2vw, 16px);
+.fz-16-12 {
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.gray-text {
+    color: $gray_light;
 }
 
 .center {

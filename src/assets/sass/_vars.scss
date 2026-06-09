@@ -11,6 +11,12 @@ $margin: clamp(30px, 7.8vw, 60px);
     transition: .3s ease all;
 }
 
+@mixin underline {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
 @mixin radius {
     border-radius: 3px;
     overflow: hidden;

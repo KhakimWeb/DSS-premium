@@ -4,19 +4,52 @@
 .button {
     @include inline-flex(14px);
     cursor: pointer;
-    background: none;
-    border: none;
-    outline: none;
-
+    position: relative;
     color: $white;
     font-size: 16px;
 
+    &:not(.button--header)::before {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: $white;
+        @include trs;
+    }
+
+    &:not(.button--header)::after {
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        border: 1.5px solid $black_light;
+        border-left: none !important;
+        border-bottom: none !important;
+        transform: rotate(45deg);
+
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        @include trs;
+    }
+
+    &:not([disabled]) {
+        @include hover {
+            &:not(.button--header)::before {
+                background-color: $red;
+            }
+
+            &:not(.button--header)::after {
+                border: 1.5px solid $white;
+            }
+        }
+    } 
+
     &--header {
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
         font-size: clamp(14px, 2vw,  16px);
         @include trs;
+        @include underline;
 
         @include hover {
             color: $gray_light;
@@ -27,41 +60,5 @@
         opacity: .6;
         cursor: not-allowed;
         pointer-events: none;
-    }
-    
-
-    &:not([disabled]) {
-        @include hover {
-            .button__icon {
-                background-color: $red;
-
-                path {
-                    stroke: $white;
-                }
-            }
-        }
-    } 
-        
-}
-
-.button__icon {
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: $white;
-    @include trs;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-        transform: translateX(1px);
-    }
-
-    path {
-        stroke: $black_light;
-        @include trs;
     }
 }
