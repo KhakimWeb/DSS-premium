@@ -58,6 +58,7 @@
     &.active {
         opacity: 1;
         cursor: default;
+        pointer-events: none;
     }
 
     @include hover {
@@ -105,6 +106,19 @@
         margin-top: 30px;
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    &.loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::after {
+            content: url('/assets/img/general/loader.svg');
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
     }
 }
 
