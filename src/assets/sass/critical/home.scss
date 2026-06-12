@@ -46,7 +46,8 @@
 
 // ADVANTAGES
 .benefits {
-    padding: 90px 0 120px; 
+    padding-top: clamp(40px, 11.73vw, 90px);
+    padding-bottom: clamp(80px, 15.64vw, 120px);
 }
 
 .benefits__inner {

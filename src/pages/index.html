@@ -4,6 +4,7 @@ meta-title: Главная
 meta-description: Главная
 ---
 
+<!-- hero -->
 <div class="hero">
     <div class="container">
         <div class="hero__inner">
@@ -21,6 +22,7 @@ meta-description: Главная
 
 
 
+<!-- benefits -->
 <div class="benefits">
     <div class="container">
         <div class="benefits__inner">
@@ -74,6 +76,7 @@ meta-description: Главная
 
 
 
+<!-- catalog -->
 <div id="home-catalog" class="catalog" data-css="/blocks/shared/catalog.min.css">
     <div class="container">
             
@@ -153,8 +156,195 @@ meta-description: Главная
 
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- about -->
+<div class="about" data-css="/blocks/home/about.min.css">
+    <div class="container">
+        <style>
+            #about-facts {
+                --f-carousel-gap: 20px;
+                --f-carousel-slide-width: calc((100% - 60px) / 4);
+            }
 
+            @media(max-width:767px) {
+                #about-facts {
+                    --f-carousel-gap: 10px;
+                    --f-carousel-slide-width: 60%;
+                }
+            }
+        </style>
+        <div id="about-facts" class="about__facts  f-carousel">
+            <div class="about__facts-item  f-carousel__slide">
+                <div class="about__num">87 000+</div>
+                <p>подобранных и проверенных автомобилей</p>
+            </div>
+
+            <div class="about__facts-item  f-carousel__slide">
+                <div class="about__num">150+</div>
+                <p>автомобилей наши эксперты проверяют ежедневно</p>
+            </div>
+
+            <div class="about__facts-item  f-carousel__slide">
+                <div class="about__num">c 2018</div>
+                <p>года подбираем, проверяем и импортируем автомобили</p>
+            </div>
+
+            <div class="about__facts-item  f-carousel__slide">
+                <div class="about__num">39</div>
+                <p>филиалов по всей России и офис в Южной Корее</p>
+            </div>
+
+            <div class="about__facts-item  f-carousel__slide">
+                <div class="about__num">5 000+</div>
+                <p>доставленных авто по всему миру</p>
+            </div>
+        </div>
+
+        <div class="about__info  animated">
+            <div>
+                <h2 class="h2">DSS Group в цифрах</h2>
+                <div class="about__text  gray-text  fz-20-14">Каждый день мы обеспечиваем безопасность сделки и контроль качества на уровне, которого ожидают владельцы премиум-класса.</div>
+                <a href="/about.html" class="button">Подробнее о нас</a>
+            </div>
+
+            <div class="about__image">
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/home/about.webp" alt="">
+            </div>
+        </div>
+
+        <div class="about__header">
+            <h2 class="h2">Полный консьерж-сервис<br>для вашего комфорта:</h2>
+            <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/hint.svg" alt="hint" class="hint">
+        </div>
+
+        <style>
+            #about-advantages {
+                --f-carousel-gap: 20px;
+                --f-carousel-slide-width: calc((100% - 60px) / 4);
+            }
+
+            @media(max-width:1200px) {
+                #about-advantages {
+                    --f-carousel-gap: 20px;
+                    --f-carousel-slide-width: 36%;
+                }
+            }
+
+            @media(max-width:767px) {
+                #about-advantages {
+                    --f-carousel-gap: 10px;
+                    --f-carousel-slide-width: 70%;
+                }
+            }
+        </style>
+        <div id="about-advantages" class="about__advantages  f-carousel  animated">
+
+            <div class="about__advantages-item  f-carousel__slide">
+                <div class="about__item-num">01.</div>
+                <div class="fz-20-16">Персональное сопровождение 24/7</div>
+                <div class="fz-16-14  gray-text">Ваш личный менеджер ведёт процесс от&nbsp;заявки до&nbsp;передачи ключей.</div>
+            </div>
+
+            <div class="about__advantages-item  f-carousel__slide">
+                <div class="about__item-num">02.</div>
+                <div class="fz-20-16">Расширенный подбор премиальных моделей</div>
+                <div class="fz-16-14  gray-text">Доступ к&nbsp;закрытым аукционам и&nbsp;каталогам Кореи, Китая, США, Японии и&nbsp;ОАЭ.</div>
+            </div>
+
+            <div class="about__advantages-item  f-carousel__slide">
+                <div class="about__item-num">03.</div>
+                <div class="fz-20-16">Глубокая экспертная проверка авто</div>
+                <div class="fz-16-14  gray-text">Осмотр сертифицированными специалистами, профилированных на&nbsp;премиум-брендах.</div>
+            </div>
+
+            <div class="about__advantages-item  f-carousel__slide">
+                <div class="about__item-num">04.</div>
+                <div class="fz-20-16">Фиксированная цена по&nbsp;договору</div>
+                <div class="fz-16-14  gray-text">Никаких доплат, скрытых платежей или «вдруг подорожало».</div>
+            </div>
+
+            <div class="about__advantages-item  f-carousel__slide">
+                <div class="about__item-num">05.</div>
+                <div class="fz-20-16">Полная страховка пути</div>
+                <div class="fz-16-14  gray-text">От&nbsp;момента покупки до&nbsp;вручения ключей.</div>
+            </div>
+
+            <div class="about__advantages-item  f-carousel__slide">
+                <div class="about__item-num">06.</div>
+                <div class="fz-20-16">Быстрая доставка</div>
+                <div class="fz-16-14  gray-text">Оптимальные маршруты, акцент на&nbsp;безопасность, скорость и&nbsp;контроль.</div>
+            </div>
+
+            <div class="about__advantages-item  f-carousel__slide">
+                <div class="about__item-num">07.</div>
+                <div class="fz-20-16">Пожизненная юридическая гарантия чистоты</div>
+                <div class="fz-16-14  gray-text">Закреплена в&nbsp;договоре с&nbsp;нашей компанией.</div>
+            </div>
+
+        </div>
+
+        <div class="about__portfolio">
+            
+            <div class="about__header">
+                <h2 class="h2">Нам доверяют те, кто ценит безупречный сервис:</h2>
+                <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/hint.svg" alt="hint" class="hint">
+            </div>
+            <style>
+                #about__portfolio-carousel {
+                    --f-carousel-gap: 30px;
+                    --f-carousel-slide-width: 75%;
+                }
+
+                @media(max-width:1200px) {
+                    #about__portfolio-carousel {
+                        --f-carousel-gap: 20px;
+                        --f-carousel-slide-width: calc(50% - 10px);
+                    }
+                }
+
+                @media(max-width:767px) {
+                    #about__portfolio-carousel {
+                        --f-carousel-gap: 10px;
+                        --f-carousel-slide-width: 80%;
+                    }
+                }
+            </style>
+            <div id="about__portfolio-carousel" class="about__portfolio-carousel  f-carousel">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{> image}}" alt="">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{> image}}" alt="">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{> image}}" alt="">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{> image}}" alt="">
+            </div>
+
+            <div class="about__portfolio-items">
+
+                <div class="about__portfolio-item  animated">
+                    <div class="about__portfolio-icon">
+                        <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/about-icon-1.svg" alt="Привезли более 400 редких автомобилей">
+                    </div>
+                    <div class="fz-20-16">Привезли более 400 редких автомобилей</div>
+                </div>
+
+                <div class="about__portfolio-item  animated">
+                    <div class="about__portfolio-icon">
+                        <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/about-icon-2.svg" alt="Закрытые поставки для частных гаражей и авто-коллекций">
+                    </div>
+                    <div class="fz-20-16">Закрытые поставки для частных гаражей и&nbsp;авто-коллекций</div>
+                </div>
+
+                <div class="about__portfolio-item  animated">
+                    <div class="about__portfolio-icon">
+                        <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/about-icon-3.svg" alt="Cотрудничество с дилерскими сетями и частными коллекционерами">
+                    </div>
+                    <div class="fz-20-16">Cотрудничество с&nbsp;дилерскими сетями и&nbsp;частными коллекционерами</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 
 

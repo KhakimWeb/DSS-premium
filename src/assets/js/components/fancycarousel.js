@@ -3,6 +3,9 @@
 ========================================== */
 
 const container = document.getElementById("myCarousel");
+const aboutFacts = document.querySelector("#about-facts");
+const aboutAdvantages = document.querySelector("#about-advantages");
+const aboutPortfolio = document.querySelector("#about__portfolio-carousel");
 
 const defOptions = {
   infinite: true,
@@ -26,12 +29,35 @@ const defOptions = {
   }
 };
 
-const marksOptions = {
+const aboutFactsOptions = {
   infinite: true,
   transition: "slide",
+  center: true,
+  slidesPerPage: 1,
+  Autoplay: {
+      pauseOnHover: false,
+      showProgressbar: false,
+      timeout: 3000
+    }
+};
+
+const aboutAdvantagesOptions = {
+  infinite: false,
+  transition: "slide",
   center: false
+};
+
+const aboutPortfolioOptions = {
+  infinite: false,
+  transition: "slide",
+  center: false,
+  slidesPerPage: 1
 };
 
 
 
 container ? Carousel(container, defOptions, {Arrows, Dots, Autoplay, Autoscroll, Lazyload }).init() : '';
+
+aboutFacts ? Carousel(aboutFacts, aboutFactsOptions, { Autoplay }).init() : '';
+aboutAdvantages ? Carousel(aboutAdvantages, aboutAdvantagesOptions, { Arrows }).init() : '';
+aboutPortfolio ? Carousel(aboutPortfolio, aboutPortfolioOptions, { Arrows }).init() : '';
