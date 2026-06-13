@@ -1,6 +1,7 @@
 @use '../../vars' as *;
 @use 'modals';
 @use 'consultation-form';
+@use 'footer';
 
 
 
@@ -26,4 +27,17 @@
 
 .center {
     text-align: center;
+}
+
+.black-light {
+    padding: clamp(50px, 8.4vw, 120px) 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: clamp(80px, 8.4vw, 120px);
+
+    & > * {
+        flex-shrink: 0;
+    }
+
 }

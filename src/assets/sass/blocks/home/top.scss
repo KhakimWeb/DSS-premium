@@ -1,0 +1,32 @@
+@use '../../vars' as *;
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include media(767px) {
+        gap: 10px;
+    }
+}
+
+.top__item {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid $white;
+    opacity: .4;
+    @include trs;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include media(1200px) {
+        font-size: 14px;
+    }
+
+    @include media(767px) {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+}

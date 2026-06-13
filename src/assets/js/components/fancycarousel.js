@@ -6,6 +6,7 @@ const container = document.getElementById("myCarousel");
 const aboutFacts = document.querySelector("#about-facts");
 const aboutAdvantages = document.querySelector("#about-advantages");
 const aboutPortfolio = document.querySelector("#about__portfolio-carousel");
+const channels = document.querySelector("#channels");
 
 const defOptions = {
   infinite: true,
@@ -61,3 +62,4 @@ container ? Carousel(container, defOptions, {Arrows, Dots, Autoplay, Autoscroll,
 aboutFacts ? Carousel(aboutFacts, aboutFactsOptions, { Autoplay }).init() : '';
 aboutAdvantages ? Carousel(aboutAdvantages, aboutAdvantagesOptions, { Arrows }).init() : '';
 aboutPortfolio ? Carousel(aboutPortfolio, aboutPortfolioOptions, { Arrows }).init() : '';
+channels ? Carousel(channels, aboutPortfolioOptions, { Arrows }).init() : '';

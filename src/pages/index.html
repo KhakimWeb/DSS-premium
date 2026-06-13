@@ -348,15 +348,134 @@ meta-description: Главная
 
 
 
+<div class="black-light">
+    <!-- channels -->
+    <div class="channels"  data-css="/blocks/shared/channels.min.css">
+        <div class="container">
+            <div class="channels__inner">
+    
+                <div class="channels__text">
+                    <h2 class="h2">Мы открыты, прозрачны и&nbsp;ценим свою репутацию</h2>
+                    <div class="fz-20-14  gray-text">Рассказываем, как выбрать автомобиль грамотно, делимся советами, разбираем схемы развода и показываем, как в нашей компании DSS Group проходит подбор под ключ</div>
+                </div>
+    
+                <style>
+                    #channels {
+                        --f-carousel-gap: 10px;
+                        --f-carousel-slide-width: 100%;
+                    }
+    
+                    @media(max-width:1200px) {
+                        #channels {
+                            --f-carousel-gap: 20px;
+                            --f-carousel-slide-width: calc(50% - 10px);
+                        }
+                    }
+    
+                    @media(max-width:767px) {
+                        #channels {
+                            --f-carousel-gap: 10px;
+                            --f-carousel-slide-width: 93%;
+                        }
+                    }
+                </style>
+                <div id="channels" class="channels__carousel f-carousel">
+                    
+                    <div class="channels__item f-carousel__slide">
+                        <img src="{{> loader}}" data-lazy="{{root}}assets/img/general/channel-1.webp" alt="Даниил автоподбор" class="channels__img">
+    
+                        <div class="channels__item-title">Даниил автоподбор</div>
+    
+                        <div class="channels__links">
+                            <a href="#" class="channel__link">
+                                <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/youtube.svg" alt="YouTube">
+                                <div>YouTube</div>
+                            </a>
+                            <a href="#" class="channel__link">
+                                <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/telegram.svg" alt="Telegram">
+                                <div>Telegram</div>
+                            </a>
+                            <a href="#" class="channel__link">
+                                <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/vk.svg" alt="ВКонтаке">
+                                <div>ВКонтаке</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="channels__item f-carousel__slide">
+                        <img src="{{> loader}}" data-lazy="{{root}}assets/img/general/channel-2.webp" alt="Даниил автоподбор" class="channels__img">
+    
+                        <div class="channels__item-title">Автомобили на заказ из Кореи и Китая | DSS Group</div>
+    
+                        <div class="channels__links">
+                            <a href="#" class="channel__link">
+                                <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/youtube.svg" alt="YouTube">
+                                <div>YouTube</div>
+                            </a>
+    
+                            <a href="#" class="channel__link">
+                                <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/telegram.svg" alt="Telegram">
+                                <div>Telegram</div>
+                            </a>
+    
+                            <a href="#" class="channel__link">
+                                <img src="{{> loader}}" data-lazy="{{root}}assets/img/icons/vk.svg" alt="ВКонтаке">
+                                <div>ВКонтаке</div>
+                            </a>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <!-- faq -->
+    <div class="faq">
+        <div class="container">
+            <h2 class="h2">FAQ</h2>
+            <div id="faq-wrapper" data-css="blocks/shared/faq.min.css" class="faq__wrapper" >
+                {{#repeat 3}}
+    
+                <div class="faq__item animated">
+                    <div class="faq__num"></div>
+                    <div class="faq__question  fz-20-16">Как вы проверяете авто?</div>
+                    <img src="{{>loader}}" data-lazy="{{root}}assets/img/icons/faq-arrow.svg" alt="faq" class="faq__icon">
+        
+                    <div class="faq__answer  fz-16-12" style="max-height: 0;">
+                        <br>
+                        <div>Наши инспекторы проводят глубокую диагностику: электроника, двигатель, подвеска, скрытые повреждения, юридическая чистота, соответствие комплектации.</div>
+                    </div>
+                </div>
+        
+                {{/repeat}}
+            </div>
+        </div>
+    </div>
+
+
+    <!-- consultation -->
+    {{> consultation}}
 
 
 
+    <!-- TOP cars -->
+    <div data-css="/blocks/home/top.min.css">
+        <div class="container">
+            <div class="top">
+
+                {{#repeat 8}}
+                <a href="#" class="top__item">Lamborghini Urus</a>
+                <a href="#" class="top__item">Mercedes-Benz G 63 AMG</a>
+                <a href="#" class="top__item">Mercedes-Benz G 63 AMG</a>
+                <a href="#" class="top__item">Bentley</a>
+                {{/repeat}}
+
+            </div>
+        </div>
+    </div>
 
 
-
-
-
-
-
-
-<!-- {{> consultation}} -->
+</div>

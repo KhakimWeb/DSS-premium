@@ -1,0 +1,82 @@
+@use '../../vars' as *;
+
+/* About Service */
+.about__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.hint {
+    display: none;
+    width: 30px;
+    height: 30px;
+
+    @include media(767px) {
+        display: block;
+
+        animation: hint 1s linear infinite alternate;
+    }
+}
+
+@keyframes hint {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-20px);
+    }
+}
+
+.about__advantages {
+    margin: 60px 0 90px;
+
+    --f-arrow-width: 38px;
+    --f-arrow-height: 38px;
+    --f-arrow-svg-width: 16px;
+    --f-arrow-svg-height: 16px;
+    --f-arrow-svg-stroke-width: 4;
+    --f-arrow-color: $white;
+
+    .is-arrow {
+        top: - 120px !important;
+        right: 0 !important;
+        transform: inherit !important;
+        left: inherit !important;
+
+        &.is-prev {
+            right: 40px !important;
+        }
+
+        @include media(767px) {
+            display: none;
+        }
+    }
+
+    @include media(767px) {
+        margin: 30px 0 60px;
+    }
+}
+
+.about__advantages-item {
+    padding: 20px;
+    background-color: $black_light;
+
+    .fz-20-16 {
+        margin: 40px 0 14px;
+    }
+
+    @include media(767px) {
+        padding: 10px;
+
+        .fz-20-16 {
+            margin: 20px 0 14px;
+        }
+    }
+}
+
+.about__item-num {
+    font-size: 24px;
+    opacity: .4;
+}

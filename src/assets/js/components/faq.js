@@ -2,9 +2,14 @@
    FAQ
 ========================================== */
 
-const faqWrapper = document.querySelector('.faq__wrapper');
+const faqWrapper = document.querySelector('#faq-wrapper');
 
 if (faqWrapper) {
+    const faqItems = faqWrapper.querySelectorAll('.faq__item');
+    faqItems.forEach((item, i) => {
+        item.querySelector('.faq__num').innerHTML = (i < 9) ? `0${i + 1}` : i + 1;
+    })
+
     faqWrapper.addEventListener('click', (e) => {
         const target = e.target;
     
