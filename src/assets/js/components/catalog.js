@@ -62,7 +62,6 @@ if (homeCatalog) {
             // Заккоментировать или удалить. Пока для тренировки
             const response = await new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    console.log(targetMark);
                     resolve({
                         ok: true,
                         status: 200,

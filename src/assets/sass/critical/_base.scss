@@ -20,6 +20,10 @@
 // Default
 html {
     overflow-x: hidden;
+
+    &.hidden {
+        overflow: hidden;
+    }
 }
 
 body {

@@ -1,0 +1,161 @@
+@use '../../vars' as *;
+
+.speedometer {
+    padding-top: 120px;
+    background-image: linear-gradient(#131313, #0E0E0E);
+    overflow: hidden;
+    position: relative;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        height: 180px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-image: linear-gradient(#0e0e0e00, #0E0E0E);
+
+        @include media(1200px) {
+            height: 100px;
+        }
+    }
+
+    @include media(1200px) {
+        padding-top: 60px;
+    }
+
+    @include media(767px) {
+        padding-top: 90px;
+    }
+}
+
+.speedometer__inner {
+    height: 580px;
+    position: relative;
+
+    .h2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 160px;
+
+        @include media(767px) {
+            left: 50%;
+            transform: translateX(-50%);
+            top: -60px;
+        }
+    }
+
+    @include media(1200px) {
+        height: 400px;
+    }
+
+    @include media(767px) {
+        height: 300px;
+    }
+}
+
+.speedometer__info {
+    max-width: 360px;
+    position: absolute;
+
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 32px;
+        background-color: $white;
+        z-index: 20;
+        position: relative;
+
+        @include media(767px) {
+            width: 3px;
+            height: 11px;
+        }
+    }
+
+    @include media(767px) {
+        gap: 4px;
+        width: 300px;
+    }
+}
+
+.speedometer__num {
+    font-size: 16px;
+}
+
+.speedometer__line {
+    width: 1px;
+    height: 170px;
+    background-color: $red;
+
+    @include media(1200px) {
+        height: 100px;
+    }
+
+    @include media(767px) {
+        height: 60px;
+    }
+}
+
+.speedometer__title {
+    margin-bottom: 20px;
+}
+
+.speedometer__img {
+    display: block;
+    width: 100%;
+
+    @include media(1200px) {
+        max-width: 767px;
+        margin: 0 auto;
+    }
+
+    @include media(767px) {
+        max-width: 360px;
+    }
+
+    &.next {
+        animation: .5s ease next-step  1;
+    }
+
+    &.previous {
+        animation: .5s ease previous-step  1;
+    }
+
+}
+
+.speedometer__text {
+    @include media(767px) {
+        margin-top: 15px;
+    }
+}
+
+@keyframes previous-step {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(calc(360deg / 7));
+    }
+}
+
+@keyframes next-step {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(calc(-360deg / 7));
+    }
+}
