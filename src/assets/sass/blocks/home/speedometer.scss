@@ -55,6 +55,33 @@
     }
 }
 
+.speedometer__arrows {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    z-index: 2;
+
+    @include media(767px) {
+        display: flex;
+    }
+}
+
+.speedometer__arrow {
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    &.disabled {
+        opacity: .2;
+    }
+}
+
 .speedometer__info {
     max-width: 360px;
     position: absolute;

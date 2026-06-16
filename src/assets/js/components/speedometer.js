@@ -1,55 +1,99 @@
 const speedometer = document.querySelector('.speedometer');
-const headerHeight = document.querySelector('header').clientHeight;
 
 if (speedometer) {
     const speedometerImg = speedometer.querySelector('.speedometer__img');
     const speedometerSpeed = speedometer.querySelector('.speedometer__num');
     const speedometerValues = speedometer.querySelectorAll('.speedometer__text');
     const speedometerTrigger = document.querySelector('#speedometer__trigger');
+    const isDesktop = window.innerWidth > 767;
+    const arrowLeft = speedometer.querySelector('.speedometer__arrow--left');
+    const arrowRight = speedometer.querySelector('.speedometer__arrow--right');
 
+    let prevTop = speedometerTrigger.getBoundingClientRect().top;
     let scrollIsDisabled = false;
     let functionIsPaused = false;
     let currentStep = 0;
     let touchStartY = 0;
 
-    customRootMargin = (window.innerWidth < 767) ? '0px 0px -50% 0px' : '0px 0px -90% 0px';
-
-
+    // const customRootMargin = '0px 0px -100% 0px';
+    // Отслеживание на появление блока
+    // const observer = new IntersectionObserver(([entry]) => {
+    //     if (entry.isIntersecting && isDesktop) {
+    //         disableScrolling();
+    //         console.log('trigger');
+    //     }
+    // }, {
+    //     rootMargin: customRootMargin
+    // });
+    // observer.observe(speedometerTrigger);
+                
+                
+                
     refreshInfo();
 
-    // Отслеживание на появление блока
-    const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-            disableScrolling();
+    if (isDesktop) {
+        window.addEventListener('scroll', watchTrigger, {
+            passive: true
+        });
+    }
+
+    
+    function watchTrigger() {
+        const currentTop = speedometerTrigger.getBoundingClientRect().top;
+        
+        if (prevTop > 0 && currentTop <= 0) {
+            disableScrolling('down');
         }
-    }, {
-        rootMargin: customRootMargin
-    });
-    observer.observe(speedometerTrigger);
 
+        if (prevTop < 0 && currentTop >= 0) {
+            disableScrolling('up');
+        }
 
+        prevTop = currentTop;
+    }
 
     window.addEventListener('touchstart', (e) => {
         touchStartY = e.touches[0].clientY;
     });
 
+    speedometer.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target.closest('.speedometer__arrows')) {
+            if (target.closest('.speedometer__arrow--left')) {
+                previousStep();
+            } else if (target.closest('.speedometer__arrow--right')) {
+                nextStep();
+            }
+            refreshInfo();
+            checkArrows();
+        }
+    })
 
+    function checkArrows() {
+        currentStep == 0 ? arrowLeft.classList.add('disabled') : arrowLeft.classList.remove('disabled');
+        currentStep == 6 ? arrowRight.classList.add('disabled') : arrowRight.classList.remove('disabled');
+    }
 
-    function disableScrolling() {
+    function disableScrolling(direction) {
+        if ((direction == 'down' && currentStep == 6) || (direction == 'up' && currentStep == 0)) { return };
+
         document.documentElement.classList.add('hidden');
         scrollIsDisabled = true;
 
         setTimeout(() => {
-            if (window.innerWidth < 767) {
-                speedometer.scrollIntoView({
-                    block: 'center'
-                })
-            } else {
-                window.scrollTo(0, speedometer.getBoundingClientRect().top + window.scrollY - headerHeight);
-            }
+            // window.scrollTo(0, speedometerTrigger.getBoundingClientRect().top + window.scrollY);
+
+            window.scrollTo({
+                top: speedometerTrigger.getBoundingClientRect().top + window.scrollY,
+                left: 0,
+                behavior: "smooth",
+            });
+
+
             window.addEventListener('wheel', manageScrollForDesktop);
             window.addEventListener('touchmove', manageScrollForMobile);
         }, 100);
+
 
     }
 
@@ -80,13 +124,17 @@ if (speedometer) {
     }
 
     function nextStep() {
+
+        if (currentStep == 6 && isDesktop) {
+            enableScrolling();
+        }
         
         if (currentStep < 6) {
             speedometerImg.classList.add('next');
             functionIsPaused = true;
             currentStep++;
 
-            if (currentStep == 6) {
+            if (currentStep == 6 && isDesktop) {
                 enableScrolling();
             }
 
@@ -100,7 +148,7 @@ if (speedometer) {
 
     function previousStep() {
 
-        if (currentStep == 0) {
+        if (currentStep == 0 && isDesktop) {
             enableScrolling();
         }
 
@@ -109,7 +157,7 @@ if (speedometer) {
             functionIsPaused = true;
             currentStep--;
 
-            if (currentStep == 0) {
+            if (currentStep == 0 && isDesktop) {
                 enableScrolling();
             }
 

@@ -273,6 +273,7 @@
   top: inherit !important;
   right: inherit !important;
   left: inherit !important;
+  z-index: 2 !important;
   bottom: 20px !important;
 }
 .about__portfolio-carousel .is-arrow.is-prev {
