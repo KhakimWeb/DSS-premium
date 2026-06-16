@@ -17,41 +17,41 @@ const sass = require('gulp-sass')(require('sass'));
 const paths = {
     html: {
         src: 'src/pages/**/*.html',
-        dest: 'dist/'
+        dest: 'docs/'
     },
     styles: {
         src: 'src/assets/sass/**/*.scss',
-        dest: 'dist/assets/css/',
+        dest: 'docs/assets/css/',
     },
     scripts: {
         src: 'src/assets/js/*.js',
-        dest: 'dist/assets/js/'
+        dest: 'docs/assets/js/'
     },
     json: {
         src: 'src/assets/json/*.json',
-        dest: 'dist/assets/json/'
+        dest: 'docs/assets/json/'
     },
     php: {
         src: 'src/assets/php/**/*.php',
-        dest: 'dist/assets/php/'
+        dest: 'docs/assets/php/'
     },
     images: {
         src: 'src/assets/img/**/*',
-        dest: 'dist/assets/img/'
+        dest: 'docs/assets/img/'
     },
     noWebp: {
         src: 'src/assets/no-webp/**/*',
-        dest: 'dist/assets/img/'
+        dest: 'docs/assets/img/'
     },
     fonts: {
         src: 'src/assets/fonts/*/*.{ttf, woff,woff2}',
-        dest: 'dist/assets/fonts/'
+        dest: 'docs/assets/fonts/'
     }
 }
 
 
 function clean() {
-    return del(['dist'])
+    return del(['docs'])
 }
 
 
@@ -153,7 +153,7 @@ function watch() {
 
     browserSync.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "./docs"
         }
     });
 
