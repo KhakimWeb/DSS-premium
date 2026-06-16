@@ -1,0 +1,161 @@
+.speedometer {
+  padding-top: 120px;
+  background-image: linear-gradient(#131313, #0E0E0E);
+  overflow: hidden;
+  position: relative;
+}
+.speedometer::after {
+  content: "";
+  position: absolute;
+  height: 180px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(rgba(14, 14, 14, 0), #0E0E0E);
+}
+@media (max-width: 1200px) {
+  .speedometer::after {
+    height: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .speedometer {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .speedometer {
+    padding-top: 90px;
+  }
+}
+
+.speedometer__inner {
+  height: 580px;
+  position: relative;
+}
+.speedometer__inner .h2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 160px;
+}
+@media (max-width: 767px) {
+  .speedometer__inner .h2 {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60px;
+  }
+}
+@media (max-width: 1200px) {
+  .speedometer__inner {
+    height: 400px;
+  }
+}
+@media (max-width: 767px) {
+  .speedometer__inner {
+    height: 300px;
+  }
+}
+
+.speedometer__info {
+  max-width: 360px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.speedometer__info::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 32px;
+  background-color: #fff;
+  z-index: 20;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .speedometer__info::before {
+    width: 3px;
+    height: 11px;
+  }
+}
+@media (max-width: 767px) {
+  .speedometer__info {
+    gap: 4px;
+    width: 300px;
+  }
+}
+
+.speedometer__num {
+  font-size: 16px;
+}
+
+.speedometer__line {
+  width: 1px;
+  height: 170px;
+  background-color: #DF0404;
+}
+@media (max-width: 1200px) {
+  .speedometer__line {
+    height: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .speedometer__line {
+    height: 60px;
+  }
+}
+
+.speedometer__title {
+  margin-bottom: 20px;
+}
+
+.speedometer__img {
+  display: block;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .speedometer__img {
+    max-width: 767px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .speedometer__img {
+    max-width: 360px;
+  }
+}
+.speedometer__img.next {
+  animation: 0.5s ease next-step 1;
+}
+.speedometer__img.previous {
+  animation: 0.5s ease previous-step 1;
+}
+
+@media (max-width: 767px) {
+  .speedometer__text {
+    margin-top: 15px;
+  }
+}
+
+@keyframes previous-step {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(51.4285714286deg);
+  }
+}
+@keyframes next-step {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-51.4285714286deg);
+  }
+}

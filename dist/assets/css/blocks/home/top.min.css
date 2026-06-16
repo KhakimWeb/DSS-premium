@@ -1,0 +1,1 @@
+.top{display:flex;flex-wrap:wrap;gap:20px}.top__item{padding:12px 20px;font-size:16px;border:1px solid #fff;opacity:.4;transition:.3s}.top__item:hover{opacity:1}@media (max-width:1200px){.top__item{font-size:14px}}@media (max-width:767px){.top{gap:10px}.top__item{font-size:10px;padding:8px 12px}}
