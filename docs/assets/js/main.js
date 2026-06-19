@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('link');
         link.rel = "stylesheet";
         link.media = "print";
-        link.href = `${window.location.origin}/assets/css/${path}?ver=1.0`;
+        link.href = `${window.location.origin}/assets/css/${path}?ver=1.1`;
         link.setAttribute('onload', "this.media='all'");
         document.head.append(link);
     
@@ -557,25 +557,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let scrollIsDisabled = false;
         let functionIsPaused = false;
         let currentStep = 0;
-        let touchStartY = 0;
-    
-        // const customRootMargin = '0px 0px -100% 0px';
-        // Отслеживание на появление блока
-        // const observer = new IntersectionObserver(([entry]) => {
-        //     if (entry.isIntersecting && isDesktop) {
-        //         disableScrolling();
-        //         console.log('trigger');
-        //     }
-        // }, {
-        //     rootMargin: customRootMargin
-        // });
-        // observer.observe(speedometerTrigger);
-                    
+        let touchStartY = 0;             
                     
                     
         refreshInfo();
     
-        if (isDesktop) {
+        if (false) {
             window.addEventListener('scroll', watchTrigger, {
                 passive: true
             });
@@ -669,6 +656,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
         function nextStep() {
     
+            if (functionIsPaused) {return};
+    
             if (currentStep == 6 && isDesktop) {
                 enableScrolling();
             }
@@ -692,6 +681,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
         function previousStep() {
     
+            if (functionIsPaused) {return};
+    
             if (currentStep == 0 && isDesktop) {
                 enableScrolling();
             }
@@ -713,6 +704,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
         function refreshInfo() {
+    
+    
             speedometerSpeed.innerHTML = `${currentStep * 40}`;
             speedometerValues.forEach(item => item.style.display = 'none');
             show(speedometerValues[currentStep]);

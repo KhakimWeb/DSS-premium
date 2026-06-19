@@ -124,10 +124,50 @@ meta-description: Главная
         </div>
 
         <div class="catalog__grid">
-            {{#repeat 5}}
+            {{#repeat 3}}
             <a href="#" class="car">
                 <div class="car__img">
-                    <img src="{{> image}}" alt="Ferrari">
+                    <img src="{{root}}assets/img/general/form-consultation.webp" alt="Ferrari">
+                </div>
+                <div class="car__mark">Ferrari</div>
+                <div class="car__model">599 GTB Fiorano</div>
+                <div class="car__info">
+                    <div>
+                        <div class="car__label">Год выпуска</div>
+                        <div class="car__value">2012</div>
+                    </div>
+                    <div>
+                        <div class="car__label">Цена</div>
+                        <div class="car__value">18 600 000 ₽ </div>
+                    </div>
+                    <img src="{{root}}assets/img/icons/card-arrow.svg" alt="">
+                </div>
+                
+            </a>
+            
+            <a href="#" class="car">
+                <div class="car__img">
+                    <img src="{{root}}assets/img/home/benefit-2.webp" alt="Ferrari">
+                </div>
+                <div class="car__mark">Ferrari</div>
+                <div class="car__model">599 GTB Fiorano</div>
+                <div class="car__info">
+                    <div>
+                        <div class="car__label">Год выпуска</div>
+                        <div class="car__value">2012</div>
+                    </div>
+                    <div>
+                        <div class="car__label">Цена</div>
+                        <div class="car__value">18 600 000 ₽ </div>
+                    </div>
+                    <img src="{{root}}assets/img/icons/card-arrow.svg" alt="">
+                </div>
+                
+            </a>
+
+            <a href="#" class="car">
+                <div class="car__img">
+                    <img src="{{root}}assets/img/home/benefit-4.webp" alt="Ferrari">
                 </div>
                 <div class="car__mark">Ferrari</div>
                 <div class="car__model">599 GTB Fiorano</div>
@@ -309,10 +349,11 @@ meta-description: Главная
                 }
             </style>
             <div id="about__portfolio-carousel" class="about__portfolio-carousel  f-carousel">
-                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{> image}}" alt="">
-                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{> image}}" alt="">
-                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{> image}}" alt="">
-                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{> image}}" alt="">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{root}}assets/img/home/portfolio-1.webp" alt="">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{root}}assets/img/home/portfolio-2.webp" alt="">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{root}}assets/img/home/portfolio-3.webp" alt="">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{root}}assets/img/home/portfolio-4.webp" alt="">
+                <img class="f-carousel__slide" src="{{> loader}}" data-lazy="{{root}}assets/img/home/portfolio-5.webp" alt="">
             </div>
 
             <div class="about__portfolio-items">

@@ -47,7 +47,7 @@
 
 .benefits {
   padding-top: clamp(40px, 11.73vw, 90px);
-  padding-bottom: clamp(80px, 15.64vw, 120px);
+  padding-bottom: 60px;
 }
 
 .benefits__inner {

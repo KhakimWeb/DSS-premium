@@ -13,25 +13,12 @@ if (speedometer) {
     let scrollIsDisabled = false;
     let functionIsPaused = false;
     let currentStep = 0;
-    let touchStartY = 0;
-
-    // const customRootMargin = '0px 0px -100% 0px';
-    // Отслеживание на появление блока
-    // const observer = new IntersectionObserver(([entry]) => {
-    //     if (entry.isIntersecting && isDesktop) {
-    //         disableScrolling();
-    //         console.log('trigger');
-    //     }
-    // }, {
-    //     rootMargin: customRootMargin
-    // });
-    // observer.observe(speedometerTrigger);
-                
+    let touchStartY = 0;             
                 
                 
     refreshInfo();
 
-    if (isDesktop) {
+    if (false) {
         window.addEventListener('scroll', watchTrigger, {
             passive: true
         });
@@ -125,6 +112,8 @@ if (speedometer) {
 
     function nextStep() {
 
+        if (functionIsPaused) {return};
+
         if (currentStep == 6 && isDesktop) {
             enableScrolling();
         }
@@ -148,6 +137,8 @@ if (speedometer) {
 
     function previousStep() {
 
+        if (functionIsPaused) {return};
+
         if (currentStep == 0 && isDesktop) {
             enableScrolling();
         }
@@ -169,6 +160,8 @@ if (speedometer) {
     }
 
     function refreshInfo() {
+
+
         speedometerSpeed.innerHTML = `${currentStep * 40}`;
         speedometerValues.forEach(item => item.style.display = 'none');
         show(speedometerValues[currentStep]);

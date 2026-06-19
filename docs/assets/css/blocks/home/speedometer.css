@@ -41,6 +41,7 @@
 }
 @media (max-width: 767px) {
   .speedometer__inner .h2 {
+    max-width: 100%;
     left: 50%;
     transform: translateX(-50%);
     top: -60px;
@@ -58,29 +59,32 @@
 }
 
 .speedometer__arrows {
+  display: flex;
   position: absolute;
   bottom: 20px;
   left: 0;
   width: 100%;
-  display: none;
   justify-content: center;
   align-items: center;
   gap: 50px;
   z-index: 2;
 }
-@media (max-width: 767px) {
-  .speedometer__arrows {
-    display: flex;
-  }
-}
 
 .speedometer__arrow {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 .speedometer__arrow.disabled {
   opacity: 0.2;
+  cursor: default;
+}
+@media (max-width: 767px) {
+  .speedometer__arrow {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .speedometer__info {
