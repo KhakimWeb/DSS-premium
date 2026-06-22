@@ -4,6 +4,11 @@
   background-repeat: no-repeat;
   background-image: url("../../img/home/hero.webp");
 }
+@media (max-width: 767px) {
+  .hero {
+    background-image: url("../../img/home/hero_mob.webp");
+  }
+}
 
 .hero__inner {
   padding: 410px 0 40px;

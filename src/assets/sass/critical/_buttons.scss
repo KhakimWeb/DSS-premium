@@ -8,6 +8,10 @@
     color: $white;
     font-size: 16px;
 
+    // @include media(767px) {
+    //     font-size: 18px;
+    // }
+
     &:not(.button--header)::before {
         content: "";
         display: block;
@@ -16,6 +20,11 @@
         border-radius: 50%;
         background-color: $white;
         @include trs;
+
+        @include media(767px) {
+            width: 35px;
+            height: 36px;
+        }
     }
 
     &:not(.button--header)::after {
@@ -32,6 +41,13 @@
         left: 10px;
         top: 10px;
         @include trs;
+
+        @include media(767px) {
+            width: 10px;
+            height: 10px;
+            left: 12px;
+            top: 13px;
+        }
     }
 
     &:not([disabled]) {

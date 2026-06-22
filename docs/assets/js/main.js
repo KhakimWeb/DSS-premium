@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('link');
         link.rel = "stylesheet";
         link.media = "print";
-        link.href = `${window.location.origin}/assets/css/${path}?ver=1.1`;
+        link.href = `${window.location.origin}/assets/css/${path}?ver=1.2`;
         link.setAttribute('onload', "this.media='all'");
         document.head.append(link);
     

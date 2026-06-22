@@ -17,6 +17,12 @@
   background-color: #fff;
   transition: 0.3s ease all;
 }
+@media (max-width: 767px) {
+  .button:not(.button--header)::before {
+    width: 35px;
+    height: 36px;
+  }
+}
 .button:not(.button--header)::after {
   content: "";
   display: block;
@@ -30,6 +36,14 @@
   left: 10px;
   top: 10px;
   transition: 0.3s ease all;
+}
+@media (max-width: 767px) {
+  .button:not(.button--header)::after {
+    width: 10px;
+    height: 10px;
+    left: 12px;
+    top: 13px;
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .button:not([disabled]):hover:not(.button--header)::before {

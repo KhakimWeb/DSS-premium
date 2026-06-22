@@ -4,6 +4,10 @@
 .hero {
     @include background;
     background-image: url('../../img/home/hero.webp');
+
+    @include media(767px) {
+        background-image: url('../../img/home/hero_mob.webp');
+    }
 }
 
 .hero__inner {
