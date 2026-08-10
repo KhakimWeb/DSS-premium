@@ -6,6 +6,10 @@ $gray_dark: #616161;
 $red: #DF0404;
 $margin: clamp(30px, 7.8vw, 60px);
 
+@mixin text {
+    font-size: clamp(14px, 2vw, 16px);
+}
+
 
 @mixin trs {
     transition: .3s ease all;

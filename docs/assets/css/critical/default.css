@@ -70,6 +70,30 @@
   cursor: not-allowed;
   pointer-events: none;
 }
+.button--simple {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #131313;
+  transition: 0.3s ease all;
+}
+.button--simple::before, .button--simple::after {
+  display: none !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button--simple:hover {
+    opacity: 0.6;
+  }
+}
+.button--carpage {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.3s ease all;
+}
 
 @font-face {
   font-family: "Arial";
@@ -165,7 +189,7 @@ header {
 }
 
 .header--fixed {
-  position: fixed;
+  position: fixed !important;
   padding: 20px 0;
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
@@ -315,4 +339,31 @@ header {
   background: rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
+}
+
+.breadcrumbs-wrapper {
+  margin-top: 180px;
+}
+@media (max-width: 950px) {
+  .breadcrumbs-wrapper {
+    margin-top: 90px;
+  }
+}
+
+.breadcrumbs {
+  list-style-type: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: clamp(14px, 2vw, 16px);
+}
+.breadcrumbs a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.4;
+}
+.breadcrumbs a::after {
+  content: "/";
 }

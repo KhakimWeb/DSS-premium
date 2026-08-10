@@ -8,10 +8,6 @@
     color: $white;
     font-size: 16px;
 
-    // @include media(767px) {
-    //     font-size: 18px;
-    // }
-
     &:not(.button--header)::before {
         content: "";
         display: block;
@@ -76,5 +72,32 @@
         opacity: .6;
         cursor: not-allowed;
         pointer-events: none;
+    }
+
+    &--simple {
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 3px;
+        background-color: $white;
+        color: $black_light;
+        @include trs;
+
+        &::before, &::after {
+            display: none !important;
+        }
+
+        @include hover {
+            opacity: .6;
+        }
+    }
+
+    &--carpage {
+        background-color: transparent;
+        color: $white;
+        border: 1px solid $white;
+        @include trs;
     }
 }

@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.autoplay.css"/> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.autoscroll.css"/> 
 
+<!-- только на странице авто -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/carousel/carousel.thumbs.css"/> 
+
 <!-- Critical css -->
 <link rel="stylesheet" href="{{root}}assets/css/critical/default.min.css?ver=1.2">
 
@@ -20,6 +23,10 @@
 
 {{#ifpage 'success'}}
   <link rel="stylesheet" href="{{root}}assets/css/critical/success.min.css?ver=1.2">
+{{/ifpage}}
+
+{{#ifpage 'carpage'}}
+  <link rel="stylesheet" href="{{root}}assets/css/critical/carpage.min.css?ver=1.2">
 {{/ifpage}}
 
 <!-- Useful meta tags -->

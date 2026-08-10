@@ -1,0 +1,216 @@
+---
+layout: default
+meta-title: Страница машины
+meta-description: Страница машины
+---
+
+<div class="breadcrumbs-wrapper">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                <a href="/catalog.html/">Каталог</a>
+            </li>
+            <li>
+                <span>Hyundai Grandeur</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="carpage-wrapper">
+    <div class="container">
+        <div class="carpage">
+
+            <div class="carpage__left">
+
+                <style>
+                    #carpage-carousel {
+                        --f-arrow-pos: 10px;
+                        --f-arrow-width: 28px;
+                        --f-arrow-height: 28px;
+                        --f-arrow-svg-width: 14px;
+                        --f-arrow-svg-height: 14px;
+                        --f-arrow-svg-stroke-width: 2;
+                        --f-arrow-color: #fff;
+                        --f-arrow-border-radius: 50%;
+                        --f-arrow-bg: #1b1b1b67;
+                        --f-arrow-hover-bg: #1b1b1bde;
+                        --f-arrow-active-bg: #1b1b1bde;
+                    }
+
+                    #myCarousel .f-carousel__slide {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+
+                    .carpage__left .f-thumbs {
+                        margin-top: 10px;
+                        --f-thumbs-gap: 10px; 
+                        --f-thumb-width: calc((100% - 30px) / 4); 
+                        --f-thumb-selected-shadow: none; 
+                        --f-thumb-border-radius: 0; 
+                    }
+
+                    .carpage__left .f-thumbs__viewport {
+                        margin: 0;
+                    }
+
+                    .carpage__left .f-thumbs__slide {
+                        height: 100px;
+                        border-radius: 3px;
+                        overflow: hidden;
+                    }
+
+                    .carpage__left .f-thumbs__slide img {
+                        object-position: center;
+                    }
+
+                    .carpage__left .f-thumbs__slide.is-selected {
+                       border: 1px solid #DF0404;
+                    }
+
+                    @media(max-width: 600px) {
+                        .carpage__left .f-thumbs {
+                            display: none;
+                        }
+                    }
+                </style>
+
+
+                <div id="carpage-carousel" class="carpage__images f-carousel">
+                    <div class="f-carousel__viewport">
+    
+                        <div class="f-carousel__slide" data-thumb-src="{{> image}}" >
+                            <img data-lazy-src="{{> image}}" data-fancybox="car-images"  alt="Sample image #1" />
+                        </div>
+    
+                        <div class="f-carousel__slide" data-thumb-src="{{> image}}" >
+                            <img data-lazy-src="{{> image}}" data-fancybox="car-images" alt="Sample image #1" />
+                        </div>
+    
+                        <div class="f-carousel__slide" data-thumb-src="{{> image}}" >
+                            <img data-lazy-src="{{> image}}" data-fancybox="car-images" alt="Sample image #1" />
+                        </div>
+    
+                        <div class="f-carousel__slide" data-thumb-src="{{> image}}" >
+                            <img data-lazy-src="{{> image}}" data-fancybox="car-images" alt="Sample image #1" />
+                        </div>
+    
+                        <div class="f-carousel__slide" data-thumb-src="{{> image}}" >
+                            <img data-lazy-src="{{> image}}" data-fancybox="car-images" alt="Sample image #1" />
+                        </div>
+    
+                        <div class="f-carousel__slide" data-thumb-src="{{> image}}" >
+                            <img data-lazy-src="{{> image}}" data-fancybox="car-images" alt="Sample image #1" />
+                        </div>
+    
+                    </div>
+
+                    <div class="carpage__counter">
+                        <span data-carousel-page></span>/<span data-carousel-pages></span>
+                    </div>
+                </div>
+
+
+                <div class="carpage__description" style="margin-top: 25px;">
+                    <div class="carpage__title">Описание</div>
+
+                    <p>
+                        Hyundai Grandeur 2012 года — это сочетание элегантного дизайна, комфорта и надежности.
+                        Автомобиль оснащен мощным бензиновым двигателем, автоматической коробкой передач и богатой комплектацией.
+                        Идеальный выбор для тех, кто ценит качество, стиль и уверенность на дороге.
+                    </p>
+
+                    <p>
+                        Hyundai Grandeur 2012 года — это сочетание элегантного дизайна, комфорта и надежности.
+                        Автомобиль оснащен мощным бензиновым двигателем, автоматической коробкой передач и богатой комплектацией.
+                        Идеальный выбор для тех, кто ценит качество, стиль и уверенность на дороге.
+                    </p>
+
+                    <p>
+                        Hyundai Grandeur 2012 года — это сочетание элегантного дизайна, комфорта и надежности.
+                        Автомобиль оснащен мощным бензиновым двигателем, автоматической коробкой передач и богатой комплектацией.
+                        Идеальный выбор для тех, кто ценит качество, стиль и уверенность на дороге.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="carpage__info">
+                <h1 class="h1">Hyundai Grandeur</h1>
+                <div class="carpage__model  fz-20-16">599 GTB Fiorano</div>
+                <div class="carpage__tags">
+                    <div class="carpage__tag">2012</div>
+                    <div class="carpage__tag">Автомат</div>
+                    <div class="carpage__tag">Бензин</div>
+                    <div class="carpage__tag">Передний привод</div>
+                </div>
+            </div>
+
+            <div class="carpage__characteristics-wrapper">
+                <div class="carpage__title">Характеристики</div>
+
+                <ul class="carpage__characteristics">
+                    <li>
+                        <div class="carpage__characteristic-name">Пробег</div>
+                        <div class="carpage__characteristic-value">78 400 км</div>
+                    </li>
+                    <li>
+                        <div class="carpage__characteristic-name">Мощность</div>
+                        <div class="carpage__characteristic-value">290 л.с.</div>
+                    </li>
+                    <li>
+                        <div class="carpage__characteristic-name">Объем двигателя</div>
+                        <div class="carpage__characteristic-value">3.3 л.</div>
+                    </li>
+                    <li>
+                        <div class="carpage__characteristic-name">Комплектация</div>
+                        <div class="carpage__characteristic-value">Premium</div>
+                    </li>
+                    <li style="margin-top: 25px;">
+                        <div class="carpage__characteristic-name">Цена</div>
+                        <div class="carpage__characteristic-price">18 600 000 ₽ </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="carpage__buttons">
+                <button class="button  button--simple" data-modal="#consultation">Связаться с продавцом</button>
+                <button class="button button--simple  button--carpage" data-modal="#details">
+                    <img src="{{root}}assets/img/icons/details.svg" alt="Детальный расчет">
+                    <div>Детальный расчет</div>
+                </button>
+                <button class="button button--simple  button--carpage" data-modal="#steps">
+                    <img src="{{root}}assets/img/icons/steps.svg" alt="Как проходит сделка">
+                    <div>Как проходит сделка</div>
+                </button>
+                <div class="carpage__notice">Цена носит информационный характер и не является публичной офертой.</div>
+            </div>
+
+            <div class="carpage__description  carpage__description--mobile">
+                <div class="carpage__title">Описание</div>
+
+                <p>
+                    Hyundai Grandeur 2012 года — это сочетание элегантного дизайна, комфорта и надежности.
+                    Автомобиль оснащен мощным бензиновым двигателем, автоматической коробкой передач и богатой комплектацией.
+                    Идеальный выбор для тех, кто ценит качество, стиль и уверенность на дороге.
+                </p>
+
+                <p>
+                    Hyundai Grandeur 2012 года — это сочетание элегантного дизайна, комфорта и надежности.
+                    Автомобиль оснащен мощным бензиновым двигателем, автоматической коробкой передач и богатой комплектацией.
+                    Идеальный выбор для тех, кто ценит качество, стиль и уверенность на дороге.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</div>

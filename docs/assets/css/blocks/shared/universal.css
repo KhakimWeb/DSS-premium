@@ -1,6 +1,6 @@
 .modal-wrapper {
   position: fixed;
-  z-index: 3;
+  z-index: 100;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
   -webkit-backdrop-filter: blur(20px);

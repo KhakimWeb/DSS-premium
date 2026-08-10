@@ -7,6 +7,7 @@ const aboutFacts = document.querySelector("#about-facts");
 const aboutAdvantages = document.querySelector("#about-advantages");
 const aboutPortfolio = document.querySelector("#about__portfolio-carousel");
 const channels = document.querySelector("#channels");
+const carpageCarousel = document.querySelector("#carpage-carousel");
 
 const defOptions = {
   infinite: true,
@@ -55,6 +56,16 @@ const aboutPortfolioOptions = {
   slidesPerPage: 1
 };
 
+const carpageCarouselOptions = {
+  infinite: false,
+  transition: "slide",
+  center: false,
+  slidesPerPage: 1,
+  Thumbs: {
+    type: "classic",
+  }
+};
+
 
 
 container ? Carousel(container, defOptions, {Arrows, Dots, Autoplay, Autoscroll, Lazyload }).init() : '';
@@ -63,3 +74,4 @@ aboutFacts ? Carousel(aboutFacts, aboutFactsOptions, { Autoplay }).init() : '';
 aboutAdvantages ? Carousel(aboutAdvantages, aboutAdvantagesOptions, { Arrows }).init() : '';
 aboutPortfolio ? Carousel(aboutPortfolio, aboutPortfolioOptions, { Arrows }).init() : '';
 channels ? Carousel(channels, aboutPortfolioOptions, { Arrows }).init() : '';
+carpageCarousel ? Carousel(carpageCarousel, carpageCarouselOptions, { Arrows, Lazyload, Thumbs }).init() : '';
