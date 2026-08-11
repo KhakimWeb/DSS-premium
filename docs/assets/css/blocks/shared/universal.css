@@ -16,7 +16,7 @@
 }
 
 .modal {
-  display: block;
+  display: none;
   width: 100%;
   position: relative;
   overflow-y: auto;
@@ -27,6 +27,9 @@
   .modal {
     padding: 20px 10px;
   }
+}
+.modal--white {
+  color: #1B1B1B;
 }
 
 .modal__close {

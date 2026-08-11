@@ -13,5 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     //= components/header
     //= components/modals
     //= components/catalog
-    //= components/speedometer
+    //= components/carpage
 })
