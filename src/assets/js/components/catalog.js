@@ -1,5 +1,9 @@
 const homeCatalog = document.querySelector('#home-catalog');
+const mainCatalog = document.querySelector('#main-catalog');
 const isMobile = window.innerWidth <= 600;
+
+
+/* Каталог на главной */
 if (homeCatalog) {
     const tabsWrapper = homeCatalog.querySelector('.catalog__tabs');
     const tabs = tabsWrapper.querySelectorAll('.catalog__tab');
@@ -104,4 +108,17 @@ if (homeCatalog) {
         }
     }
 
+}
+
+
+/* Каталог основной */
+if (mainCatalog) {
+    const catalogIcon = mainCatalog.querySelector('#filter-icon');
+    const catalogFilter = mainCatalog.querySelector('#filter');
+
+
+    catalogIcon.addEventListener('click', () => {
+        catalogIcon.classList.toggle('active');
+        catalogFilter.classList.toggle('active');
+    })
 }

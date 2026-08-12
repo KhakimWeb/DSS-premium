@@ -3,12 +3,7 @@ $t: 900px;
 $m: 600px;
 
 .carpage-wrapper {
-    margin-top: 60px;
     padding-bottom: 90px;
-
-    @include media($t) {
-        margin-top: 40px;
-    }
 }
 
 .carpage {

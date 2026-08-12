@@ -349,11 +349,11 @@ header {
 }
 
 .breadcrumbs-wrapper {
-  margin-top: 180px;
+  margin: 180px 0 60px;
 }
 @media (max-width: 950px) {
   .breadcrumbs-wrapper {
-    margin-top: 90px;
+    margin: 90px 0 40px;
   }
 }
 

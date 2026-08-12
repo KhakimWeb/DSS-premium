@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //= components/header
     //= components/modals
+    //= components/speedometer
     //= components/catalog
     //= components/carpage
 })

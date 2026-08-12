@@ -1,0 +1,49 @@
+<form class="form" data-form="consultation">
+    <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+    <input type="text" class="form__input" name="phone" placeholder="Телефон">
+    <input type="text" class="form__input" name="city" placeholder="Ваш город">
+
+    <div class="form__radio-group">
+
+        <div class="form__radio">
+            <input
+                type="radio"
+                id="buy-soon"
+                name="purchase"
+                value="Я выбрал авто и хочу купить в ближайшие 30 дней"
+                checked
+            >
+            <label for="buy-soon">
+                Я выбрал авто и хочу купить в ближайшие 30 дней
+            </label>
+        </div>
+
+        <div class="form__radio">
+            <input
+                type="radio"
+                id="not-in-hurry"
+                name="purchase"
+                value="Я пока прицениваюсь и не тороплюсь с выбором"
+            >
+            <label for="not-in-hurry">
+                Я пока прицениваюсь и не тороплюсь с выбором
+            </label>
+        </div>
+
+    </div>
+    
+    <input type="text" name="site" style="display:none">
+    <input type="text" name="url" style="display:none">
+
+    <label class="form__label">
+        <input class="form__checkbox" type="checkbox" name="checkbox-privacy">
+        <span>Я ознакомлен и выражаю согласие с положениями <a href="#">Политики обработки  Персональных данных</a></span>
+    </label>
+
+    <label class="form__label">
+        <input class="form__checkbox"  type="checkbox" name="checkbox-agreement">
+        <span>Я ознакомлен и выражаю <a href="#">согласие на обработку персональных данных</a></span>
+    </label>
+
+    <button class="button" type="submit">Получить консультацию</button>
+</form>

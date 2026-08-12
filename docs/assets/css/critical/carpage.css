@@ -1,11 +1,5 @@
 .carpage-wrapper {
-  margin-top: 60px;
   padding-bottom: 90px;
-}
-@media (max-width: 900px) {
-  .carpage-wrapper {
-    margin-top: 40px;
-  }
 }
 
 .carpage {

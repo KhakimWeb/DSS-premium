@@ -38,6 +38,11 @@
     }
 }
 
+.consultation__subtitle {
+    margin: -20px 0 40px;
+    opacity: .6;
+}
+
 .form {
     display: inline-flex;
     flex-direction: column;
@@ -101,6 +106,72 @@
         text-underline-offset: 3px;
     }
 }
+
+
+
+
+
+
+
+.form__radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 14px 20px;
+    border: 1px solid rgba($white, .2);
+}
+
+.form__radio {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.form__radio input {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+
+    margin: 2px 0 0;
+
+    border: 1px solid #555;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.form__radio input:checked {
+    border-color: #fff;
+}
+
+.form__radio input:checked::after {
+    content: "";
+
+    display: block;
+
+    width: 5px;
+    height: 5px;
+    margin: 2px;
+
+    border-radius: 50%;
+    background: #fff;
+}
+
+.form__radio label {
+    color: #aaa;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+
+
+
 
 .consultation__info {
     display: flex;

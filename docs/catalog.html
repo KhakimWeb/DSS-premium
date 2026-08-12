@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Спасибо</title>
+<title>Каталог</title>
 
 <!-- fancybox -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"/>
@@ -21,9 +21,10 @@
 <link rel="stylesheet" href="assets/css/critical/default.min.css?ver=1.2">
 
 
-  <link rel="stylesheet" href="assets/css/critical/success.min.css?ver=1.2">
 
 
+  <link rel="stylesheet" href="assets/css/critical/catalog.min.css?ver=1.2">
+  <link rel="stylesheet" href="assets/css/blocks/shared/catalog-grid.min.css?ver=1.2">
 
 <!-- Useful meta tags -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -32,7 +33,7 @@
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="google" content="notranslate">
 <meta name="format-detection" content="telephone=no">
-<meta name="description" content="Спасибо">
+<meta name="description" content="Каталог">
 
 <!--favicon-->
 
@@ -160,24 +161,481 @@
 
     </div>
 </div>
-<div class="success">
-    <div class="container">
-        <div class="success__inner">
-            <svg width="53" height="20" viewBox="0 0 53 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.6" d="M19.8965 3.54004L16.3984 16.7344L13.1797 19.2744H2L6.84375 1H18.0234L19.8965 3.54004ZM35.4473 3.54004L34.6875 6.40332H29.209L29.5068 5.2793H26.6562L25.9355 7.99805H31.7197L33.5918 10.5371L31.9492 16.7344L28.7305 19.2744H20.0137L18.1406 16.7344L18.9004 13.8711H24.3789L24.0811 14.9961H26.9307L27.6514 12.2764H21.8682L19.9961 9.7373C20.5437 7.67164 21.0911 5.60571 21.6387 3.54004L24.8574 1H33.5742L35.4473 3.54004ZM49.1289 1L51.001 3.54004L50.2422 6.40332H44.7637L45.0615 5.2793H42.2109L41.4902 7.99805H47.2744L49.1465 10.5371L47.5039 16.7344L44.2852 19.2744H35.5684L33.6953 16.7344L34.4541 13.8711H39.9336L39.6357 14.9961H42.4854L43.207 12.2764H37.4229L35.5498 9.7373C36.0973 7.67162 36.6459 5.60572 37.1934 3.54004L40.4121 1H49.1289ZM8.61328 14.9961H11.3809L13.9561 5.2793H11.1885L8.61328 14.9961Z" fill="white"/>
-            </svg>
+<main class="catalog-wrapper">
 
-            <div>
-                <div class="success__suptitle  fz-20-16">[ Наши специалисты свяжутся с вами ]</div>
-                <h1 class="h1">Спасибо!</h1>
-    
-                <div class="button-wrapper">
-                    <a href="/" class="button">Вернуться на главную</a>
+    <div>
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="/">Главная</a>
+                    </li>
+                    <li>
+                        <span>Каталог</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <div class="container">
+        
+            <div id="main-catalog" class="catalog">
+                <div class="catalog-header">
+                    <h1 class="h1">Каталог автомобилей </h1>
+            
+                    <div id="filter-icon" class="catalog-icon">
+                        <img src="assets/img/icons/filter.svg" alt="filter">
+                    </div>
+            
+                    <div class="catalog-countries">
+                        <a href="" class="catalog-country  active">Южная Корея</a>
+                        <a href="" class="catalog-country">Китай</a>
+                        <a href="" class="catalog-country">Европа</a>
+                        <a href="" class="catalog-country">Япония</a>
+                        <a href="" class="catalog-country">Америка</a>
+                        <a href="" class="catalog-country">ОАЭ</a>
+                    </div>
                 </div>
+            
+                <form id="filter" class="filter">
+            
+                    <div class="filter__row filter__row--top">
+                        <!-- Бренд -->
+                        <div class="filter__field">
+                            <select name="brand" class="filter__select">
+                                <option value="">Бренд</option>
+                                <option value="kia">Kia</option>
+                                <option value="hyundai">Hyundai</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="bmw">BMW</option>
+                            </select>
+                
+                            <span class="filter__icon" aria-hidden="true"></span>
+                        </div>
+                
+                
+                        <!-- Модель -->
+                        <div class="filter__field">
+                            <select name="model" class="filter__select">
+                                <option value="">Модель</option>
+                                <option value="k5">K5</option>
+                                <option value="sonata">Sonata</option>
+                                <option value="camry">Camry</option>
+                            </select>
+                
+                            <span class="filter__icon" aria-hidden="true"></span>
+                        </div>
+                
+                
+                        <!-- Двигатель -->
+                        <div class="filter__field  filter__field--engine">
+                            <select name="engine" class="filter__select">
+                                <option value="">Двигатель</option>
+                                <option value="petrol">Бензин</option>
+                                <option value="diesel">Дизель</option>
+                                <option value="hybrid">Гибрид</option>
+                                <option value="electric">Электро</option>
+                            </select>
+                
+                            <span class="filter__icon" aria-hidden="true"></span>
+                        </div>
+                
+                
+                        <div class="filter__group  filter__group--year">
+                            <!-- Год выпуска от -->
+                            <div class="filter__field">
+                                <select name="year_from" class="filter__select">
+                                    <option value="">Год выпуска от</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                </select>
+                    
+                                <span class="filter__icon" aria-hidden="true"></span>
+                            </div>
+                    
+                            <!-- Год выпуска до -->
+                            <div class="filter__field">
+                                <select name="year_to" class="filter__select">
+                                    <option value="">до</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                </select>
+                    
+                                <span class="filter__icon" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <div class="filter__row filter__row--bottom">
+                        <div class="filter__group  filter__group--mileage">
+                            <!-- Пробег от -->
+                            <div class="filter__field">
+                                <input
+                                    type="number"
+                                    name="mileage_from"
+                                    class="filter__input"
+                                    placeholder="Пробег от"
+                                    min="0"
+                                >
+                            </div>
+                    
+                            <!-- Пробег до -->
+                            <div class="filter__field">
+                                <input
+                                    type="number"
+                                    name="mileage_to"
+                                    class="filter__input"
+                                    placeholder="до"
+                                    min="0"
+                                >
+                            </div>
+                        </div>
+                
+                        <div class="filter__group  filter__group--power">
+                            <!-- Мощность от -->
+                            <div class="filter__field">
+                                <select name="power_from" class="filter__select">
+                                    <option value="">Мощность от</option>
+                                    <option value="100">100 л.с.</option>
+                                    <option value="150">150 л.с.</option>
+                                    <option value="200">200 л.с.</option>
+                                    <option value="250">250 л.с.</option>
+                                </select>
+                    
+                                <span class="filter__icon" aria-hidden="true"></span>
+                            </div>
+                    
+                            <!-- Мощность до -->
+                            <div class="filter__field">
+                                <select name="power_to" class="filter__select">
+                                    <option value="">до</option>
+                                    <option value="150">150 л.с.</option>
+                                    <option value="200">200 л.с.</option>
+                                    <option value="250">250 л.с.</option>
+                                    <option value="300">300 л.с.</option>
+                                </select>
+                    
+                                <span class="filter__icon" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                
+                
+                        <!-- Кнопки -->
+                        <button type="reset" class="filter__button  filter__button--reset">
+                            Сбросить фильтр
+                        </button>
+                
+                        <button type="submit" class="filter__button  filter__button--submit">
+                            Найти автомобиль
+                        </button>
+                    </div>
+            
+            
+                </form>
+        
+                <div class="catalog__grid">
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/general/form-consultation.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+                    
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/home/benefit-2.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+        
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/home/benefit-4.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/general/form-consultation.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+                    
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/home/benefit-2.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+        
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/home/benefit-4.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/general/form-consultation.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+                    
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/home/benefit-2.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+        
+                    <a href="catalog/carpage.html" class="car">
+                        <div class="car__img">
+                            <img src="assets/img/home/benefit-4.webp" alt="Ferrari">
+                        </div>
+                        <div class="car__mark">Ferrari</div>
+                        <div class="car__model">599 GTB Fiorano</div>
+                        <div class="car__info">
+                            <div>
+                                <div class="car__label">Год выпуска</div>
+                                <div class="car__value">2012</div>
+                            </div>
+                            <div>
+                                <div class="car__label">Цена</div>
+                                <div class="car__value">18 600 000 ₽ </div>
+                            </div>
+                            <img src="assets/img/icons/card-arrow.svg" alt="">
+                        </div>
+                        
+                    </a>
+                </div>
+        
+            </div>
+        
+        </div>
+    </div>
+    
+    
+    <!-- consultation -->
+    <div class="container">
+        <div class="consultation">
+    
+            <div>
+                <div class="consultation__title">Заявка на автомобиль</div>
+                <p class="consultation__subtitle  fz-16-14">Заполните форму и&nbsp;наш специалист свяжется с&nbsp;вами в&nbsp;ближайшее время</p>
+                <form class="form" data-form="consultation">
+                    <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+                    <input type="text" class="form__input" name="phone" placeholder="Телефон">
+                    <input type="text" class="form__input" name="city" placeholder="Ваш город">
+                
+                    <div class="form__radio-group">
+                
+                        <div class="form__radio">
+                            <input
+                                type="radio"
+                                id="buy-soon"
+                                name="purchase"
+                                value="Я выбрал авто и хочу купить в ближайшие 30 дней"
+                                checked
+                            >
+                            <label for="buy-soon">
+                                Я выбрал авто и хочу купить в ближайшие 30 дней
+                            </label>
+                        </div>
+                
+                        <div class="form__radio">
+                            <input
+                                type="radio"
+                                id="not-in-hurry"
+                                name="purchase"
+                                value="Я пока прицениваюсь и не тороплюсь с выбором"
+                            >
+                            <label for="not-in-hurry">
+                                Я пока прицениваюсь и не тороплюсь с выбором
+                            </label>
+                        </div>
+                
+                    </div>
+                    
+                    <input type="text" name="site" style="display:none">
+                    <input type="text" name="url" style="display:none">
+                
+                    <label class="form__label">
+                        <input class="form__checkbox" type="checkbox" name="checkbox-privacy">
+                        <span>Я ознакомлен и выражаю согласие с положениями <a href="#">Политики обработки  Персональных данных</a></span>
+                    </label>
+                
+                    <label class="form__label">
+                        <input class="form__checkbox"  type="checkbox" name="checkbox-agreement">
+                        <span>Я ознакомлен и выражаю <a href="#">согласие на обработку персональных данных</a></span>
+                    </label>
+                
+                    <button class="button" type="submit">Получить консультацию</button>
+                </form>        </div>
+    
+            <div class="consultation__info">
+                <div class="consultation__image">
+                    <img src="assets/img/general/loader.svg" data-lazy="assets/img/general/form-consultation.webp" alt="Мы не передаём ваши данные третьим лицам. Свяжется персональный менеджер — без спама и навязчивых звонков.">
+                </div>
+            </div>
+    
+        </div>
+    </div>    
+    
+    <!-- faq -->
+    <div class="faq">
+        <div class="container">
+            <h2 class="h2">FAQ</h2>
+            <div id="faq-wrapper" data-css="blocks/shared/faq.min.css" class="faq__wrapper" >
+    
+                <div class="faq__item animated">
+                    <div class="faq__num"></div>
+                    <div class="faq__question  fz-20-16">Как вы проверяете авто?</div>
+                    <img src="assets/img/general/loader.svg" data-lazy="assets/img/icons/faq-arrow.svg" alt="faq" class="faq__icon">
+        
+                    <div class="faq__answer  fz-16-12" style="max-height: 0;">
+                        <br>
+                        <div>Наши инспекторы проводят глубокую диагностику: электроника, двигатель, подвеска, скрытые повреждения, юридическая чистота, соответствие комплектации.</div>
+                    </div>
+                </div>
+        
+    
+                <div class="faq__item animated">
+                    <div class="faq__num"></div>
+                    <div class="faq__question  fz-20-16">Как вы проверяете авто?</div>
+                    <img src="assets/img/general/loader.svg" data-lazy="assets/img/icons/faq-arrow.svg" alt="faq" class="faq__icon">
+        
+                    <div class="faq__answer  fz-16-12" style="max-height: 0;">
+                        <br>
+                        <div>Наши инспекторы проводят глубокую диагностику: электроника, двигатель, подвеска, скрытые повреждения, юридическая чистота, соответствие комплектации.</div>
+                    </div>
+                </div>
+        
+    
+                <div class="faq__item animated">
+                    <div class="faq__num"></div>
+                    <div class="faq__question  fz-20-16">Как вы проверяете авто?</div>
+                    <img src="assets/img/general/loader.svg" data-lazy="assets/img/icons/faq-arrow.svg" alt="faq" class="faq__icon">
+        
+                    <div class="faq__answer  fz-16-12" style="max-height: 0;">
+                        <br>
+                        <div>Наши инспекторы проводят глубокую диагностику: электроника, двигатель, подвеска, скрытые повреждения, юридическая чистота, соответствие комплектации.</div>
+                    </div>
+                </div>
+        
             </div>
         </div>
     </div>
-</div>
+</main>
 <div style="display: none;" id="modal-wrapper" class="modal-wrapper">
     <div class="modal-wrapper__inner  container">
 
