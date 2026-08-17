@@ -121,4 +121,11 @@ if (mainCatalog) {
         catalogIcon.classList.toggle('active');
         catalogFilter.classList.toggle('active');
     })
+
+    // Поиск, фильтрация и вывод контента
+    catalogFilter.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(catalogFilter));
+        console.log(data);
+    })
 }

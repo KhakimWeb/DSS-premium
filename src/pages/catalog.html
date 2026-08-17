@@ -47,7 +47,7 @@ meta-description: Каталог
                         <!-- Бренд -->
                         <div class="filter__field">
                             <select name="brand" class="filter__select">
-                                <option value="">Бренд</option>
+                                <option value="all">Бренд</option>
                                 <option value="kia">Kia</option>
                                 <option value="hyundai">Hyundai</option>
                                 <option value="toyota">Toyota</option>
@@ -61,7 +61,7 @@ meta-description: Каталог
                         <!-- Модель -->
                         <div class="filter__field">
                             <select name="model" class="filter__select">
-                                <option value="">Модель</option>
+                                <option value="all">Модель</option>
                                 <option value="k5">K5</option>
                                 <option value="sonata">Sonata</option>
                                 <option value="camry">Camry</option>
@@ -74,7 +74,7 @@ meta-description: Каталог
                         <!-- Двигатель -->
                         <div class="filter__field  filter__field--engine">
                             <select name="engine" class="filter__select">
-                                <option value="">Двигатель</option>
+                                <option value="all">Двигатель</option>
                                 <option value="petrol">Бензин</option>
                                 <option value="diesel">Дизель</option>
                                 <option value="hybrid">Гибрид</option>
@@ -89,7 +89,7 @@ meta-description: Каталог
                             <!-- Год выпуска от -->
                             <div class="filter__field">
                                 <select name="year_from" class="filter__select">
-                                    <option value="">Год выпуска от</option>
+                                    <option value="0">Год выпуска от</option>
                                     <option value="2026">2026</option>
                                     <option value="2025">2025</option>
                                     <option value="2024">2024</option>
@@ -102,7 +102,7 @@ meta-description: Каталог
                             <!-- Год выпуска до -->
                             <div class="filter__field">
                                 <select name="year_to" class="filter__select">
-                                    <option value="">до</option>
+                                    <option value="9999">до</option>
                                     <option value="2026">2026</option>
                                     <option value="2025">2025</option>
                                     <option value="2024">2024</option>
@@ -144,7 +144,7 @@ meta-description: Каталог
                             <!-- Мощность от -->
                             <div class="filter__field">
                                 <select name="power_from" class="filter__select">
-                                    <option value="">Мощность от</option>
+                                    <option value="0">Мощность от</option>
                                     <option value="100">100 л.с.</option>
                                     <option value="150">150 л.с.</option>
                                     <option value="200">200 л.с.</option>
@@ -157,7 +157,7 @@ meta-description: Каталог
                             <!-- Мощность до -->
                             <div class="filter__field">
                                 <select name="power_to" class="filter__select">
-                                    <option value="">до</option>
+                                    <option value="9999999999">до</option>
                                     <option value="150">150 л.с.</option>
                                     <option value="200">200 л.с.</option>
                                     <option value="250">250 л.с.</option>
@@ -254,6 +254,19 @@ meta-description: Каталог
     
     <!-- consultation -->
     {{> consultation-catalog}}
+
+
+
+    <!-- seo -->
+    <div class="seo">
+        <div class="container">
+            <div class="seo__inner">
+                <h2>Seo-текст</h2>
+                <p>Каждый день мы обеспечиваем безопасность сделки и контроль качества на уровне, которого ожидают владельцы премиум-класса. Каждый день мы обеспечиваем безопасность сделки и контроль качества на уровне, которого ожидают владельцы премиум-класса.</p>
+                <p>Каждый день мы обеспечиваем безопасность сделки и контроль качества на уровне, которого ожидают владельцы премиум-класса. Каждый день мы обеспечиваем безопасность сделки и контроль качества на уровне, которого ожидают владельцы премиум-класса.</p>
+            </div>
+        </div>
+    </div>
     
     
     <!-- faq -->

@@ -233,6 +233,24 @@
   font-size: clamp(14px, 2vw, 16px);
 }
 
+.seo__inner {
+  display: flex;
+  flex-direction: column;
+}
+.seo__inner > *:not(:first-child) {
+  margin-top: 1em;
+}
+.seo__inner p {
+  color: #9F9F9F;
+  font-size: clamp(14px, 2.6vw, 20px);
+}
+.seo__inner h2 {
+  font-size: clamp(20px, 4.4vw, 34px);
+}
+.seo__inner h3 {
+  font-size: clamp(19px, 3.6vw, 28px);
+}
+
 .footer {
   background-color: #131313;
   font-size: clamp(14px, 2vw, 16px);

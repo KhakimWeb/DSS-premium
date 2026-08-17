@@ -1,0 +1,23 @@
+@use '../../vars' as *;
+
+.seo__inner {
+    display: flex;
+    flex-direction: column;
+
+    & > *:not(:first-child) {
+        margin-top: 1em;
+    }
+
+    p {
+        color: #9F9F9F;
+        font-size: clamp(14px, 2.6vw, 20px);
+    }
+
+    h2 {
+        font-size: clamp(20px, 4.4vw, 34px);
+    }
+
+    h3 {
+        font-size: clamp(19px, 3.6vw, 28px);
+    }
+}
